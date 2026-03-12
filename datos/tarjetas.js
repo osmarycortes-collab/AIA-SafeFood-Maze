@@ -132,7 +132,7 @@ Pierdes 5 segundos.`
     nivelCompletado: {
 
         mensaje: `¡Felicidades!
-Has completado el primer desafío de AIA SafeFood Maze.
+Has completado el desafío de AIA SafeFood Maze.
 
 En este nivel aprendiste sobre las
 Buenas Prácticas de Manufactura (BPM).
@@ -152,5 +152,6 @@ Sigue avanzando y continúa aprendiendo.`,
 
         boton: "Generar certificado"
     }
+
 
 }
