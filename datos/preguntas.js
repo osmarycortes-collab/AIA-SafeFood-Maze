@@ -370,36 +370,69 @@ pista:"El frío es clave."
 
 9:[
 {
-pregunta:"¿Qué bacteria es crítica en pollo?",
+pregunta:"¿Qué patógeno emergente afecta el tracto reproductivo y respiratorio?",
 opciones:[
-"Salmonella",
-"Listeria",
-"Bacillus"
+"Gallibacterium anatis",
+"Salmonella Pullorum",
+"Mycoplasma gallisepticum"
 ],
 correcta:0,
-pista:"Muy común en aves."
+pista:"Antes se conocía como Pasteurella haemolytica-like."
 },
 
 {
-pregunta:"¿Cómo prevenir Salmonella?",
+pregunta:"¿Para qué se usa el análisis ELISA en pollitos de 1 día?",
 opciones:[
-"Cocción adecuada",
-"Congelar",
-"Añadir sal"
+"Medir anticuerpos maternos",
+"Detectar bacterias vivas",
+"Identificar virus en heces"
 ],
 correcta:0,
-pista:"El calor la destruye."
+pista:"Evalúa la inmunidad transferida desde la gallina reproductora."
 },
 
 {
-pregunta:"¿Qué enfermedad causa?",
+pregunta:"¿Cómo se transmite Salmonella verticalmente al pollito?",
 opciones:[
-"Salmonelosis",
-"Gripe",
-"Anemia"
+"Vía saco vitelino",
+"Por el aire del nido",
+"Contacto con el cascarón"
 ],
 correcta:0,
-pista:"Produce diarrea."
+pista:"La bacteria infecta el huevo dentro de la madre antes de la postura."
+},
+
+{
+pregunta:"¿Qué prueba determina la resistencia bacteriana en el pollito?",
+opciones:[
+"Antibiograma",
+"Prueba de ELISA",
+"Conteo en placa"
+],
+correcta:0,
+pista:"Mide la sensibilidad de la bacteria ante diferentes antibiótico."
+},
+
+{
+pregunta:"¿Cuál es la muestra ideal para ELISA en pollitos?",
+opciones:[
+"Suero sanguíneo",
+"Hisopado cloacal",
+"Plumas"
+],
+correcta:0,
+pista:"Se extrae de la sangre para medir los títulos de anticuerpos."
+},
+
+{
+pregunta:"¿Qué hongo se busca en pulmones de pollitos de 1 día?",
+opciones:[
+"Aspergillus fumigatus",
+"Candida albicans",
+"Fusarium spp."
+],
+correcta:0,
+pista:"Causa la 'neumonía de la incubadora' por esporas en el ambiente."
 }
 ],
 
