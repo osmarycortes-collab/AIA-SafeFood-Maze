@@ -225,21 +225,20 @@ display:none;
 
 #joystick button{
 
-font-size:26px;
-
-width:70px;
-
-height:70px;
-
-margin:5px;
+width:60px;
+height:60px;
 
 border-radius:50%;
 
 border:none;
 
-background:#1f4fa3;
+background:rgba(40,90,180,0.8);
 
 color:white;
+
+font-size:22px;
+
+margin:5px;
 
 box-shadow:0 4px 10px rgba(0,0,0,0.3);
 
@@ -259,5 +258,6 @@ height:auto;
 display:block;
 margin:auto;
 }
+
 
 
