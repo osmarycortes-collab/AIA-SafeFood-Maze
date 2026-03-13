@@ -249,3 +249,11 @@ background:#163a7a;
 transform:scale(0.95);
 
 }
+
+canvas{
+
+max-width:100%;
+
+height:auto;
+
+}
