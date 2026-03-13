@@ -164,6 +164,17 @@ pista:"El lavado reduce carga microbiana."
 },
 
 {
+pregunta:"¿Principal vector de E. coli en hortalizas?",
+opciones:[
+"Agua de riego contaminada",
+"Biofilms en acero",
+"Radiación ultravioleta"
+],
+correcta:0,
+pista:"Es el vehículo de transmisión fecal-oral por excelencia."
+},
+
+{
 pregunta:"¿Qué causa E.coli patógena?",
 opciones:[
 "Diarrea severa",
