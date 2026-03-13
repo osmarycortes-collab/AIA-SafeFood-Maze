@@ -118,6 +118,17 @@ pista:"Es una toxina resistente."
 },
 
 {
+pregunta:"¿Tipo de contaminación que pasa de las manos sucias al dulce?",
+opciones:[
+"Contaminación cruzada",
+"Contaminación química",
+"Contaminación física"
+],
+correcta:0,
+pista:"Los microbios cruzan de un lugar sucio a uno limpio ."
+},
+  
+{
 pregunta:"¿Cómo prevenir contaminación?",
 opciones:[
 "Higiene del manipulador",
