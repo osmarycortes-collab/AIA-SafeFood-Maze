@@ -638,6 +638,8 @@ crearEnemigos()
 
 function reiniciarNivel(){
 
+document.getElementById("joystick").style.display="block"
+
 tiempo = CONFIG.tiempoNiveles[nivelActual]
 
 preguntaActual = 0
@@ -670,5 +672,6 @@ document.getElementById("down").addEventListener("touchstart",()=>moverJugador(0
 document.getElementById("left").addEventListener("touchstart",()=>moverJugador(-1,0))
 
 document.getElementById("right").addEventListener("touchstart",()=>moverJugador(1,0))
+
 
 
