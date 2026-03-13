@@ -324,6 +324,39 @@ pista:"Ambiente anaerobio."
 },
 
 {
+pregunta:"¿Qué patógeno crece en embutidos?",
+opciones:[
+"Listeria monocytogenes",
+"Bacterias lácticas",
+"Mohos superficiales"
+],
+correcta:0,
+pista:"Sobrevive a la sal y al frío de las cavas."
+},
+
+{
+pregunta:"¿Principal riesgo en carne picada?",
+opciones:[
+"E. coli productora de Shiga",
+"Levaduras ambientales",
+"Esporas de hongos"
+],
+correcta:0,
+pista:"Se asocia a contaminación durante el faenado."
+},
+
+{
+pregunta:"¿Qué hacer si falla el Límite Crítico?",
+opciones:[
+"Acción correctiva",
+"Seguir produciendo",
+"Lavar el empaque"
+],
+correcta:0,
+pista:"Es la medida para retomar el control del proceso."
+},
+
+{
 pregunta:"¿Qué previene crecimiento?",
 opciones:[
 "Control temperatura",
