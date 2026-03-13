@@ -2,6 +2,7 @@ body{
 text-align:center;
 font-family:Arial;
 background:#f0f0f0;
+touch-action: manipulation;
 }
 
 #logo{
@@ -273,6 +274,7 @@ height:auto;
 }
 
 }
+
 
 
 
