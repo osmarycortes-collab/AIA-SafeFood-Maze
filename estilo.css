@@ -180,4 +180,24 @@ color:#555;
 .certificado{
 max-height:70vh;
 overflow-y:auto;
+
+}
+
+#controles{
+margin-top:15px;
+text-align:center;
+}
+
+#controles button{
+font-size:28px;
+padding:12px 18px;
+margin:5px;
+border-radius:10px;
+border:none;
+background:#1f4fa3;
+color:white;
+}
+
+#controles button:active{
+background:#163a7a;
 }
