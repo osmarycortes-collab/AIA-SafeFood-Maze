@@ -119,6 +119,8 @@ function iniciarJuego(){
 
 panel.classList.add("oculto")
 
+document.getElementById("joystick").style.display="block"
+
 juegoIniciado=true
 juegoPausado=false
 
@@ -666,3 +668,4 @@ document.getElementById("down").addEventListener("touchstart",()=>moverJugador(0
 document.getElementById("left").addEventListener("touchstart",()=>moverJugador(-1,0))
 
 document.getElementById("right").addEventListener("touchstart",()=>moverJugador(1,0))
+
