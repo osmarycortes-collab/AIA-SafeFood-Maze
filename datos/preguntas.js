@@ -210,6 +210,28 @@ pista:"Proceso térmico."
 },
 
 {
+pregunta:"¿Qué microorganismo causa fermentación?",
+opciones:[
+"Levaduras osmófilas",
+"Staphylococcus",
+"Listeria"
+],
+correcta:0,
+pista:"Causan gas y mal olor en el jugo."
+},
+
+{
+pregunta:"¿Qué indica la presencia de Alicyclobacillus?",
+opciones:[
+"Deterioro por calor",
+"Contaminación viral",
+"Exceso de azúcar"
+],
+correcta:0,
+pista:"Sus esporas sobreviven a la pasteurización."
+},
+
+{
 pregunta:"¿Qué controla crecimiento bacteriano?",
 opciones:[
 "pH ácido",
