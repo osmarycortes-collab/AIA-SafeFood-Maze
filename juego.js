@@ -63,7 +63,7 @@ const panelBotones=document.getElementById("panelBotones")
 
 function mostrarTarjeta(titulo,texto,boton,accion){
 
-panel.classList.remove("oculto")
+document.getElementById("joystick").style.display="none"
 
 panelTitulo.innerText=titulo
 panelTexto.innerText=texto
@@ -75,6 +75,8 @@ btn.innerText=boton
 btn.onclick=accion
 
 panelBotones.appendChild(btn)
+
+panel.classList.remove("oculto")
 
 }
 
@@ -668,4 +670,5 @@ document.getElementById("down").addEventListener("touchstart",()=>moverJugador(0
 document.getElementById("left").addEventListener("touchstart",()=>moverJugador(-1,0))
 
 document.getElementById("right").addEventListener("touchstart",()=>moverJugador(1,0))
+
 
