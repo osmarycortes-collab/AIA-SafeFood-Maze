@@ -219,6 +219,8 @@ text-align:center;
 
 z-index:10;
 
+display:none;
+
 }
 
 #joystick button{
@@ -257,4 +259,5 @@ height:auto;
 display:block;
 margin:auto;
 }
+
 
