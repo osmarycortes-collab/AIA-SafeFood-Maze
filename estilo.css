@@ -259,6 +259,20 @@ display:block;
 margin:auto;
 }
 
+@media (max-width:700px){
+
+#panel{
+width:90%;
+max-height:80vh;
+overflow:auto;
+}
+
+canvas{
+width:95%;
+height:auto;
+}
+
+}
 
 
 
