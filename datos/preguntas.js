@@ -267,6 +267,28 @@ pista:"Superficies húmedas."
 },
 
 {
+pregunta:"¿Qué indica la presencia de Coliformes?",
+opciones:[
+"Falla en higiene",
+"Exceso de grasa",
+"Mala pasteurización"
+],
+correcta:0,
+pista:"Son indicadores de contaminación post-proceso."
+},
+
+{
+pregunta:"¿Qué bacteria resiste la pasteurización?",
+opciones:[
+"Bacillus (esporas)",
+"Salmonella",
+"Campylobacter"
+],
+correcta:0,
+pista:"Sus formas de resistencia sobreviven al calor."
+},
+  
+{
 pregunta:"¿Qué enfermedad causa?",
 opciones:[
 "Listeriosis",
