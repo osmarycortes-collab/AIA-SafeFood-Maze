@@ -201,3 +201,51 @@ color:white;
 #controles button:active{
 background:#163a7a;
 }
+
+/* JOYSTICK MOVIL */
+
+#joystick{
+
+position:fixed;
+
+bottom:20px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+text-align:center;
+
+z-index:200;
+
+}
+
+#joystick button{
+
+font-size:26px;
+
+width:70px;
+
+height:70px;
+
+margin:5px;
+
+border-radius:50%;
+
+border:none;
+
+background:#1f4fa3;
+
+color:white;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+
+}
+
+#joystick button:active{
+
+background:#163a7a;
+
+transform:scale(0.95);
+
+}
