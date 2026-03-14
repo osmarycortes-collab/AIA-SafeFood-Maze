@@ -182,7 +182,6 @@ color:#555;
 .certificado{
 max-height:70vh;
 overflow-y:auto;
-
 }
 
 #controles{
@@ -233,7 +232,7 @@ border-radius:50%;
 
 border:none;
 
-background:rgba(223,224,226,0.8);
+background:rgba(223, 224, 226, 0.8);
 
 color:white;
 
@@ -241,7 +240,7 @@ font-size:22px;
 
 margin:5px;
 
-box-shadow:0 4px 10px rgba(223,228,228,0.3);
+box-shadow:0 4px 10px rgba(233, 228, 228, 0.3);
 
 }
 
@@ -280,6 +279,16 @@ margin-left:10px;
 cursor:pointer;
 background:none;
 border:none;
+}
+
+/* =========================
+   Imagen enemigo tarjeta
+========================= */
+
+#panelTexto img{
+display:block;
+margin:10px auto;
+max-width:120px;
 }
 
 }
