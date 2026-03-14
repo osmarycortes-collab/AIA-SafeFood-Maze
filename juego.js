@@ -37,6 +37,7 @@ const sonidoPuerta = new Audio(CONFIG.sonidos.puerta)
 
 const musicaNivel = new Audio(CONFIG.musicaNiveles[nivelActual-1])
 musicaNivel.loop = true
+const btnMusica = document.getElementById("btnMusica")
 
 /* HUD */
 
