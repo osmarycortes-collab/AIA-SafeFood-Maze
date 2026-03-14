@@ -106,12 +106,12 @@ mostrarNivel
 
 function mostrarNivel(){
 
-let info = MICROORGANISMOS[nivelActual]
-  
+let info = MICROORGANISMOS[nivelActual-1]
+
 mostrarTarjeta(
-TARJETAS.nivel.titulo,
-TARJETAS.nivel.mensaje,
-TARJETAS.nivel.boton,
+info.titulo,
+info.mensaje,
+"Continuar",
 iniciarJuego
 )
 
