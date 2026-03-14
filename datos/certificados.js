@@ -6,53 +6,53 @@
 const CERTIFICADOS = {
 
 1:{
-nivel:"Nivel 1 – BPM Manejo de Granos",
+nivel:"Nivel 1 –  Manejo de Granos",
 tema:"BPM – Manejo de Granos"
 },
 
 2:{
-nivel:"Nivel 2 – BPM Molinería",
+nivel:"Nivel 2 –  Molinería",
 tema:"BPM – Molinería"
 },
 
 3:{
-nivel:"Nivel 3 – BPM Panadería",
+nivel:"Nivel 3 – Panadería",
 tema:"BPM – Panadería"
 },
 
 4:{
-nivel:"Nivel 4 – HACCP Básico",
+nivel:"Nivel 4 – Confitería",
 tema:"HACCP Básico"
 },
 
 5:{
-nivel:"Nivel 5 – Sanitización de Vegetales",
+nivel:"Nivel 5 – Vegetales",
 tema:"Sanitización de Vegetales"
 },
 
 6:{
-nivel:"Nivel 6 – Control de Procesos HACCP",
+nivel:"Nivel 6 – Jugos",
 tema:"Control de Procesos HACCP"
 },
 
 7:{
-nivel:"Nivel 7 – Inocuidad en Lácteos",
+nivel:"Nivel 7 –  Lácteos",
 tema:"Inocuidad en Lácteos"
 },
 
 8:{
-nivel:"Nivel 8 – Inocuidad en Cárnicos",
+nivel:"Nivel 8 – Cárnicos",
 tema:"Inocuidad en Cárnicos"
 },
 
 9:{
-nivel:"Nivel 9 – Inocuidad Avícola",
+nivel:"Nivel 9 – Avícola",
 tema:"Inocuidad Avícola"
 },
 
 10:{
-nivel:"Nivel 10 – FSSC 22000 Básico",
-tema:"FSSC 22000 Básico"
+nivel:"Nivel 10 – Productos Listos",
+tema:"FSSC 22000 Básico en productos listos"
 }
 
 }
