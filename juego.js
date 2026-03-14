@@ -37,8 +37,10 @@ const sonidoPuerta = new Audio(CONFIG.sonidos.puerta)
 
 const musicaNivel = new Audio(CONFIG.musicaNiveles[nivelActual-1])
 musicaNivel.loop = true
+
 const btnMusica = document.getElementById("btnMusica")
 
+if(btnMusica){
 btnMusica.onclick = function(){
 
 musicaNivel.muted = !musicaNivel.muted
@@ -49,6 +51,7 @@ btnMusica.innerText = "🔇"
 btnMusica.innerText = "🔊"
 }
 
+}
 }
 
 /* HUD */
