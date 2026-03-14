@@ -251,7 +251,7 @@ tiempo -= CONFIG.penalizacionComodin
 
 function abrirPregunta(nivel,pregunta){
 
-let p=PREGUNTAS[nivel+1][pregunta-1]
+let p=PREGUNTAS[nivel][pregunta-1]
 
 let opciones = [...p.opciones]
 
