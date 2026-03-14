@@ -553,7 +553,13 @@ return
 
 let tiempoFinal = CONFIG.tiempoNiveles[nivelActual-1] - tiempo
 
-let info = CERTIFICADOS[nivelActual-1]
+let info
+
+if(nivelActual > 10){
+info = CERTIFICADOS[10]
+}else{
+info = CERTIFICADOS[nivelActual-1]
+}
 
 panel.classList.remove("oculto")
 
