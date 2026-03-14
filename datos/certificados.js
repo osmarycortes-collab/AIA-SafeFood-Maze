@@ -31,11 +31,6 @@ tema:"Sanitización de Vegetales"
 },
 
 {
-nivel:"Nivel 5 ",
-tema:"Sanitización de Vegetales"
-},
-
-{
 nivel:"Nivel 6 ",
 tema:"Control de Procesos HACCP"
 },
@@ -58,6 +53,11 @@ tema:"Inocuidad Avícola"
 {
 nivel:"Nivel 10 ",
 tema:"FSSC 22000 Básico en productos listos"
+}
+
+{
+nivel:"Todos los niveles",
+tema:"FORMACIÓN EN INOCUIDAD ALIMENTARIA"
 }
 
 ]
