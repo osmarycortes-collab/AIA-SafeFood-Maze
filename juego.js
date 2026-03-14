@@ -344,17 +344,33 @@ direccion.y = dy
 
 }
 
+/* MOVIMIENTO AUTOMATICO TIPO PACMAN */
+
+function moverAutomatico(){
+
+let ahora = Date.now()
+
+if(ahora - ultimoMovimiento < velocidadJugador) return
+
+ultimoMovimiento = ahora
+
+if(direccion.x === 0 && direccion.y === 0) return
+
 let f = Math.floor(jugador.y / CONFIG.tamCelda)
 let c = Math.floor(jugador.x / CONFIG.tamCelda)
 
-let nf=f+dy
-let nc=c+dx
+let nf = f + direccion.y
+let nc = c + direccion.x
 
-if(mapa[nf][nc]===1){
+/* PARED */
+
+if(mapa[nf][nc] === 1){
 return
 }
 
-if(mapa[nf][nc]==="S"){
+/* SALIDA */
+
+if(mapa[nf][nc] === "S"){
 
 if(preguntaActual < PUERTAS_NIVEL[nivelActual-1]){
 
@@ -379,30 +395,33 @@ return
 
 /* PUERTA */
 
-if(mapa[nf][nc]==="D"){
+if(mapa[nf][nc] === "D"){
 
-if(preguntaAbierta)return
+if(preguntaAbierta) return
 
-preguntaAbierta=true
+preguntaAbierta = true
 
-let correcta=abrirPregunta(nivelActual,preguntaActual+1)
+let correcta = abrirPregunta(nivelActual,preguntaActual+1)
 
 if(correcta){
 
-mapa[nf][nc]=0
+mapa[nf][nc] = 0
 preguntaActual++
-  
-sonidoPuerta.currentTime=0
-sonidoPuerta.play().catch(() => {})
+
+sonidoPuerta.currentTime = 0
+sonidoPuerta.play().catch(()=>{})
 
 }
 
-preguntaAbierta=false
+preguntaAbierta = false
 return
 
+}
 
-jugador.x=nc*CONFIG.tamCelda
-jugador.y=nf*CONFIG.tamCelda
+/* MOVER JUGADOR */
+
+jugador.x = nc * CONFIG.tamCelda
+jugador.y = nf * CONFIG.tamCelda
 
 }
 
@@ -422,26 +441,26 @@ e.dirY = Math.sign(dy)
 
 }
 
-let nx=e.x+e.dirX*2
-let ny=e.y+e.dirY*2
+let nx = e.x + e.dirX * 2
+let ny = e.y + e.dirY * 2
 
-let f=Math.floor(ny/CONFIG.tamCelda)
-let c=Math.floor(nx/CONFIG.tamCelda)
+let f = Math.floor(ny / CONFIG.tamCelda)
+let c = Math.floor(nx / CONFIG.tamCelda)
 
-if(mapa[f][c]===1 || mapa[f][c]==="D"){
+if(mapa[f][c] === 1 || mapa[f][c] === "D"){
 
-let dirs=[[1,0],[-1,0],[0,1],[0,-1]]
-let r=dirs[Math.floor(Math.random()*4)]
+let dirs = [[1,0],[-1,0],[0,1],[0,-1]]
+let r = dirs[Math.floor(Math.random()*4)]
 
-e.dirX=r[0]
-e.dirY=r[1]
+e.dirX = r[0]
+e.dirY = r[1]
 
 return
 
 }
 
-e.x=nx
-e.y=ny
+e.x = nx
+e.y = ny
 
 })
 
