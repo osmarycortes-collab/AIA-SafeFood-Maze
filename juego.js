@@ -8,7 +8,7 @@ let nivelActual = 1
 let mapa = MAPAS[nivelActual-1]
 
 let preguntaActual = 0
-let tiempo = CONFIG.tiempoNiveles[nivelActual]
+let tiempo = CONFIG.tiempoNiveles[nivelActual-1]
 let vidas = CONFIG.vidasIniciales
 
 let juegoIniciado = false
