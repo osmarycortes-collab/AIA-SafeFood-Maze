@@ -553,7 +553,7 @@ return
 
 let tiempoFinal = CONFIG.tiempoNiveles[nivelActual] - tiempo
 
-let info = CERTIFICADOS[nivelActual+1]
+let info = CERTIFICADOS[nivelActual-1]
 
 panel.classList.remove("oculto")
 
