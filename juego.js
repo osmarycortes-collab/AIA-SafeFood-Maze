@@ -96,7 +96,7 @@ mostrarInstrucciones
 function mostrarInstrucciones(){
 
 mostrarTarjeta(
-"",
+"Instrucciones",
 TARJETAS.instrucciones.mensaje,
 TARJETAS.instrucciones.boton,
 mostrarNivel
