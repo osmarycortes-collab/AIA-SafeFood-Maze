@@ -125,9 +125,17 @@ function mostrarNivel(){
 
 let info = MICROORGANISMOS[nivelActual-1]
 
+let enemigo = CONFIG.microorganismos[nivelActual-1]
+
+let texto = `
+<img src="${enemigo}" style="width:120px;margin:10px">
+
+${info.mensaje}
+`
+
 mostrarTarjeta(
 info.titulo,
-info.mensaje,
+texto,
 "Continuar",
 iniciarJuego
 )
