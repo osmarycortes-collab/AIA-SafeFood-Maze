@@ -4,8 +4,8 @@ const ctx = canvas.getContext("2d")
 canvas.width = CONFIG.anchoCanvas
 canvas.height = CONFIG.altoCanvas
 
-let nivelActual = 0
-let mapa = MAPAS[nivelActual]
+let nivelActual = 1
+let mapa = MAPAS[nivelActual-1]
 
 let preguntaActual = 0
 let tiempo = CONFIG.tiempoNiveles[nivelActual]
@@ -24,10 +24,10 @@ const spriteJugador = new Image()
 spriteJugador.src = CONFIG.jugadorSprite
 
 const spriteEnemigo = new Image()
-spriteEnemigo.src = CONFIG.microorganismos[nivelActual]
+spriteEnemigo.src = CONFIG.microorganismos[nivelActual-1]
 
 const fondo = new Image()
-fondo.src = CONFIG.fondosPlantas[nivelActual]
+fondo.src = CONFIG.fondosPlantas[nivelActual-1]
 
 /* SONIDOS */
 
@@ -628,7 +628,7 @@ panel.classList.add("oculto")
 juegoIniciado = true
 juegoPausado = false
 
-mapa = MAPAS[nivelActual]
+mapa = MAPAS[nivelActual-1]
 
 preguntaActual = 0
 
