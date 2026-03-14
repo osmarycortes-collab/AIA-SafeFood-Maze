@@ -306,12 +306,14 @@ return false
 
 if(r==p.correcta){
 
-sonidoCorrecto.play()
+sonidoCorrecto.currentTime=0
+sonidoCorrecto.play().catch(() => {})
 return true
 
 }else{
 
-sonidoError.play()
+sonidoError.currentTime=0
+sonidoError.play().catch(() => {})
 tiempo-=CONFIG.penalizacionError
 return false
 
