@@ -113,7 +113,7 @@ opciones:[
 "Toxina",
 "Espora"
 ],
-correcta:0,
+correcta:1,
 pista:"Es una toxina resistente."
 },
 
