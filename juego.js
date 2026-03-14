@@ -24,7 +24,10 @@ let juegoPausado = false
 let preguntaAbierta = false
 
 let jugador = {x:0,y:0}
-let direccion = {x:0, y:0}
+let direccion = {x:0,y:0}
+
+let ultimoMovimiento = 0
+let velocidadJugador = 120
 
 let enemigos = []
 
