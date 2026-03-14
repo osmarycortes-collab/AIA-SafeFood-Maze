@@ -53,7 +53,7 @@ tema:"Inocuidad Avícola"
 {
 nivel:"Nivel 10 ",
 tema:"FSSC 22000 Básico en productos listos"
-}
+},
 
 {
 nivel:"Todos los niveles",
