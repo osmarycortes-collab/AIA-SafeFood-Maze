@@ -649,7 +649,7 @@ spriteEnemigo.src = CONFIG.microorganismos[nivelActual-1]
 
 fondo.src = CONFIG.fondosPlantas[nivelActual-1]
 
-musicaNivel.src = CONFIG.musicaNiveles[nivelActual]
+musicaNivel.src = CONFIG.musicaNiveles[nivelActual-1]
 musicaNivel.play()
 
 juegoPausado=false
