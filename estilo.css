@@ -287,8 +287,9 @@ border:none;
 
 #panelTexto img{
 display:block;
-margin:10px auto;
-max-width:120px;
+margin:20px auto;
+max-width:200px;
+border-radius: 12px;
 }
 
 }
