@@ -24,7 +24,7 @@ const spriteJugador = new Image()
 spriteJugador.src = CONFIG.jugadorSprite
 
 const spriteEnemigo = new Image()
-spriteEnemigo.src = CONFIG.microorganismos[nivelActual-1]
+spriteEnemigo.src = CONFIG.microorganismos[nivelActual]
 
 const fondo = new Image()
 fondo.src = CONFIG.fondosPlantas[nivelActual-1]
