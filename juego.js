@@ -43,6 +43,18 @@ const sonidoCorrecto = new Audio(CONFIG.sonidos.correcto)
 const sonidoError = new Audio(CONFIG.sonidos.error)
 const sonidoPuerta = new Audio(CONFIG.sonidos.puerta)
 
+function desbloquearAudio(){
+
+sonidoCorrecto.play().then(()=>{sonidoCorrecto.pause();sonidoCorrecto.currentTime=0}).catch(()=>{})
+sonidoError.play().then(()=>{sonidoError.pause();sonidoError.currentTime=0}).catch(()=>{})
+sonidoPuerta.play().then(()=>{sonidoPuerta.pause();sonidoPuerta.currentTime=0}).catch(()=>{})
+
+document.removeEventListener("touchstart", desbloquearAudio)
+
+}
+
+document.addEventListener("touchstart", desbloquearAudio)
+
 const musicaNivel = new Audio(CONFIG.musicaNiveles[nivelActual-1])
 musicaNivel.loop = true
 
