@@ -400,7 +400,6 @@ sonidoPuerta.play().catch(() => {})
 preguntaAbierta=false
 return
 
-}
 
 jugador.x=nc*CONFIG.tamCelda
 jugador.y=nf*CONFIG.tamCelda
