@@ -452,45 +452,46 @@ jugador.y = nf * CONFIG.tamCelda
 
 function moverEnemigos(){
 
+let ahora = Date.now()
+
+if(ahora - ultimoMovimientoEnemigo < velocidadEnemigo) return
+
+ultimoMovimientoEnemigo = ahora
+
 enemigos.forEach(e=>{
 
-let f = Math.floor(e.y / CONFIG.tamCelda)
-let c = Math.floor(e.x / CONFIG.tamCelda)
-
-let pf = Math.floor(jugador.y / CONFIG.tamCelda)
-let pc = Math.floor(jugador.x / CONFIG.tamCelda)
+let dx = jugador.x - e.x
+let dy = jugador.y - e.y
 
 /* DIRECCION HACIA EL JUGADOR */
 
-let df = Math.sign(pf - f)
-let dc = Math.sign(pc - c)
+let dirX = Math.sign(dx)
+let dirY = Math.sign(dy)
 
-/* INTENTAR IR HACIA EL JUGADOR */
+/* INTENTAR MOVER EN X */
 
-let nf = f + df
-let nc = c + dc
+let nx = e.x + dirX * 2
+let ny = e.y
 
-if(mapa[nf][nc] !== 1 && mapa[nf][nc] !== "D"){
+let f = Math.floor(ny / CONFIG.tamCelda)
+let c = Math.floor(nx / CONFIG.tamCelda)
 
-e.y = nf * CONFIG.tamCelda
-e.x = nc * CONFIG.tamCelda
+if(mapa[f][c] !== 1 && mapa[f][c] !== "D"){
+e.x = nx
 return
-
 }
 
-/* SI NO PUEDE → MOVIMIENTO ALTERNATIVO */
+/* SI NO PUEDE EN X → INTENTAR Y */
 
-let dirs=[[1,0],[-1,0],[0,1],[0,-1]]
-let r=dirs[Math.floor(Math.random()*4)]
+nx = e.x
+ny = e.y + dirY * 2
 
-nf = f + r[1]
-nc = c + r[0]
+f = Math.floor(ny / CONFIG.tamCelda)
+c = Math.floor(nx / CONFIG.tamCelda)
 
-if(mapa[nf][nc] !== 1 && mapa[nf][nc] !== "D"){
-
-e.y = nf * CONFIG.tamCelda
-e.x = nc * CONFIG.tamCelda
-
+if(mapa[f][c] !== 1 && mapa[f][c] !== "D"){
+e.y = ny
+return
 }
 
 })
