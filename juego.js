@@ -24,7 +24,7 @@ const spriteJugador = new Image()
 spriteJugador.src = CONFIG.jugadorSprite
 
 const spriteEnemigo = new Image()
-spriteEnemigo.src = CONFIG.microorganismos[nivelActual]
+spriteEnemigo.src = CONFIG.microorganismos[nivelActual-1]
 
 const fondo = new Image()
 fondo.src = CONFIG.fondosPlantas[nivelActual-1]
@@ -209,7 +209,7 @@ function crearEnemigos(){
 
 enemigos=[]
 
-let cantidad=[1,1,2,2,3,3,4,4,5,6][nivelActual]
+let cantidad=[1,1,2,2,3,3,4,4,5,6][nivelActual-1]
 
 for(let i=0;i<cantidad;i++){
 
@@ -645,7 +645,7 @@ preguntaActual = 0
 
 tiempo = CONFIG.tiempoNiveles[nivelActual]
 
-spriteEnemigo.src = CONFIG.microorganismos[nivelActual]
+spriteEnemigo.src = CONFIG.microorganismos[nivelActual-1]
 
 fondo.src = CONFIG.fondosPlantas[nivelActual-1]
 
