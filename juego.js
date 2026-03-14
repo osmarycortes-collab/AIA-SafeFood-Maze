@@ -339,6 +339,11 @@ return false
 
 function moverJugador(dx,dy){
 
+direccion.x = dx
+direccion.y = dy
+
+}
+
 let f = Math.floor(jugador.y / CONFIG.tamCelda)
 let c = Math.floor(jugador.x / CONFIG.tamCelda)
 
