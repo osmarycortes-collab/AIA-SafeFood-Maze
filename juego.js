@@ -372,7 +372,8 @@ if(correcta){
 
 mapa[nf][nc]=0
 preguntaActual++
-sonidoPuerta.play()
+sonidoPuerta.currentTime=0
+sonidoPuerta.play().catch(() => {})
 
 }
 
