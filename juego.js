@@ -454,56 +454,44 @@ function moverEnemigos(){
 
 enemigos.forEach(e=>{
 
-let dx = jugador.x - e.x
-let dy = jugador.y - e.y
-
-/* DIRECCION HACIA EL JUGADOR */
-
-let dirX = Math.sign(dx)
-let dirY = Math.sign(dy)
-
-/* POSICION ACTUAL */
-
 let f = Math.floor(e.y / CONFIG.tamCelda)
 let c = Math.floor(e.x / CONFIG.tamCelda)
 
-/* INTENTAR MOVER EN X */
+let pf = Math.floor(jugador.y / CONFIG.tamCelda)
+let pc = Math.floor(jugador.x / CONFIG.tamCelda)
 
-let nx = e.x + dirX * 2
-let ny = e.y
+/* DIRECCION HACIA EL JUGADOR */
 
-let fx = Math.floor(ny / CONFIG.tamCelda)
-let cx = Math.floor(nx / CONFIG.tamCelda)
+let df = Math.sign(pf - f)
+let dc = Math.sign(pc - c)
 
-if(mapa[fx][cx] !== 1 && mapa[fx][cx] !== "D"){
+/* INTENTAR IR HACIA EL JUGADOR */
 
-e.x = nx
+let nf = f + df
+let nc = c + dc
+
+if(mapa[nf][nc] !== 1 && mapa[nf][nc] !== "D"){
+
+e.y = nf * CONFIG.tamCelda
+e.x = nc * CONFIG.tamCelda
 return
 
 }
 
-/* SI NO PUEDE EN X → INTENTAR Y */
-
-nx = e.x
-ny = e.y + dirY * 2
-
-let fy = Math.floor(ny / CONFIG.tamCelda)
-let cy = Math.floor(nx / CONFIG.tamCelda)
-
-if(mapa[fy][cy] !== 1 && mapa[fy][cy] !== "D"){
-
-e.y = ny
-return
-
-}
-
-/* SI NO PUEDE → CAMBIO SUAVE */
+/* SI NO PUEDE → MOVIMIENTO ALTERNATIVO */
 
 let dirs=[[1,0],[-1,0],[0,1],[0,-1]]
 let r=dirs[Math.floor(Math.random()*4)]
 
-e.x += r[0]*2
-e.y += r[1]*2
+nf = f + r[1]
+nc = c + r[0]
+
+if(mapa[nf][nc] !== 1 && mapa[nf][nc] !== "D"){
+
+e.y = nf * CONFIG.tamCelda
+e.x = nc * CONFIG.tamCelda
+
+}
 
 })
 
