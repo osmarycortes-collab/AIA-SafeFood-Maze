@@ -615,6 +615,9 @@ return
 
 }
 
+mostrarNivel()
+return
+
 mapa = MAPAS[nivelActual]
 
 preguntaActual=0
