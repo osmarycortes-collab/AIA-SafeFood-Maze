@@ -1,8 +1,12 @@
 const canvas = document.getElementById("juego")
 const ctx = canvas.getContext("2d")
 
-document.addEventListener("touchmove", function(e){
+canvas.addEventListener("touchmove", function(e){
+
+if(e.target === canvas){
 e.preventDefault()
+}
+
 },{ passive:false })
 
 canvas.width = CONFIG.anchoCanvas
