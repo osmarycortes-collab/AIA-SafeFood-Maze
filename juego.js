@@ -564,6 +564,8 @@ dibujarEnemigos()
 
 if(juegoIniciado && !juegoPausado){
 
+moverAutomatico()
+
 moverEnemigos()
 colision()
 
