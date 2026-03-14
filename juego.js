@@ -34,6 +34,9 @@ let siguienteDireccion = {x:0,y:0}
 let ultimoMovimiento = 0
 let velocidadJugador = 120
 
+let ultimoMovimientoEnemigo = 0
+let velocidadEnemigo = 400
+
 let enemigos = []
 
 /* SPRITES */
