@@ -372,6 +372,7 @@ if(correcta){
 
 mapa[nf][nc]=0
 preguntaActual++
+  
 sonidoPuerta.currentTime=0
 sonidoPuerta.play().catch(() => {})
 
