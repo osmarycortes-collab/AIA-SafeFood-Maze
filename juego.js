@@ -128,7 +128,7 @@ let info = MICROORGANISMOS[nivelActual-1]
 let enemigo = CONFIG.microorganismos[nivelActual-1]
 
 let texto = `
-<img src="${enemigo}" style="width:120px;margin:10px">
+<img src="${enemigo}">
 
 ${info.mensaje}
 `
