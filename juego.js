@@ -551,7 +551,7 @@ alert("Escribe tu nombre completo")
 return
 }
 
-let tiempoFinal = CONFIG.tiempoNiveles[nivelActual] - tiempo
+let tiempoFinal = CONFIG.tiempoNiveles[nivelActual-1] - tiempo
 
 let info = CERTIFICADOS[nivelActual-1]
 
