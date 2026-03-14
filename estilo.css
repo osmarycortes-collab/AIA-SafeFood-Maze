@@ -292,6 +292,11 @@ max-width:180px !important;
 height:auto !important;
 }
 
+body{
+overflow:hidden;
+touch-action:none;
+}
+   
 }
 
 
