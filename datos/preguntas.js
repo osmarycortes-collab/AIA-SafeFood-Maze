@@ -28,11 +28,11 @@ pista:"Es una micotoxina común en granos."
 {
 pregunta:"¿Qué micotoxina se asocia a Fusarium?",
 opciones:[
-"Vomitoxina (DON)",
 "Aflatoxina",
+"Vomitoxina (DON)",
 "Ocratoxina"
 ],
-correcta:0,
+correcta:1,
 pista:"Su nombre común se relaciona con vómito."
 },
 
@@ -50,11 +50,11 @@ pista:"Los granos húmedos son el riesgo."
 {
 pregunta:"¿Qué proceso reduce riesgo en harina?",
 opciones:[
-"Control de humedad",
 "Añadir azúcar",
+"Control de humedad",
 "Congelar"
 ],
-correcta:0,
+correcta:1,
 pista:"La humedad es el principal factor."
 }
 ],
@@ -63,11 +63,11 @@ pista:"La humedad es el principal factor."
 {
 pregunta:"¿Qué bacteria puede sobrevivir en panadería?",
 opciones:[
-"Bacillus cereus",
+"Vibrio",
 "Salmonella",
-"Vibrio"
+"Bacillus cereus"
 ],
-correcta:0,
+correcta:2,
 pista:"Produce toxinas en arroz y harina."
 },
 
@@ -98,19 +98,19 @@ pista:"La temperatura controla bacterias."
 {
 pregunta:"¿Qué bacteria puede contaminar chocolate?",
 opciones:[
-"Staphylococcus aureus",
+"E.coli",
 "Listeria",
-"E.coli"
+"Staphylococcus aureus"
 ],
-correcta:0,
+correcta:2,
 pista:"Se transmite por manipuladores."
 },
 
 {
 pregunta:"¿Qué produce Staphylococcus?",
 opciones:[
-"Toxina",
 "Virus",
+"Toxina",
 "Espora"
 ],
 correcta:0,
@@ -120,46 +120,48 @@ pista:"Es una toxina resistente."
 {
 pregunta:"¿Tipo de contaminación que pasa de las manos sucias al dulce?",
 opciones:[
-"Contaminación cruzada",
+"Contaminación física",
 "Contaminación química",
-"Contaminación física"
+"Contaminación cruzada"
 ],
 correcta:0,
 pista:"Los microbios cruzan de un lugar sucio a uno limpio ."
 },
-  
+
 {
 pregunta:"¿Cómo prevenir contaminación?",
 opciones:[
-"Higiene del manipulador",
 "Congelar producto",
+"Higiene del manipulador",
 "Añadir azúcar"
 ],
-correcta:0,
+correcta:1,
 pista:"Las manos son la principal fuente."
 }
+
+
 ],
 
 5:[
 {
 pregunta:"¿Qué bacteria es común en vegetales?",
 opciones:[
-"E.coli",
+"Bacillus",
 "Salmonella",
-"Bacillus"
+"E.coli"
 ],
-correcta:0,
+correcta:2,
 pista:"Se asocia a contaminación fecal."
 },
 
 {
 pregunta:"¿Cómo prevenir contaminación?",
 opciones:[
-"Lavado adecuado",
 "Congelar",
+"Lavado adecuado",
 "Añadir sal"
 ],
-correcta:0,
+correcta:1,
 pista:"El lavado reduce carga microbiana."
 },
 
@@ -177,11 +179,11 @@ pista:"Es el vehículo de transmisión fecal-oral por excelencia."
 {
 pregunta:"¿Qué causa E.coli patógena?",
 opciones:[
-"Diarrea severa",
 "Gripe",
+"Diarrea severa",
 "Fiebre leve"
 ],
-correcta:0,
+correcta:1,
 pista:"Afecta el sistema digestivo."
 }
 ],
@@ -190,11 +192,11 @@ pista:"Afecta el sistema digestivo."
 {
 pregunta:"¿Qué bacteria puede sobrevivir en jugos?",
 opciones:[
-"Salmonella",
+"Clostridium",
 "Bacillus",
-"Clostridium"
+"Salmonella"
 ],
-correcta:0,
+correcta:2,
 pista:"Puede sobrevivir si no hay pasteurización."
 },
 
@@ -212,33 +214,33 @@ pista:"Proceso térmico."
 {
 pregunta:"¿Qué microorganismo causa fermentación?",
 opciones:[
-"Levaduras osmófilas",
 "Staphylococcus",
+"Levaduras osmófilas",
 "Listeria"
 ],
-correcta:0,
+correcta:1,
 pista:"Causan gas y mal olor en el jugo."
 },
 
 {
 pregunta:"¿Qué indica la presencia de Alicyclobacillus?",
 opciones:[
-"Deterioro por calor",
+"Exceso de azúcar",
 "Contaminación viral",
-"Exceso de azúcar"
+"Deterioro por calor"
 ],
-correcta:0,
+correcta:2,
 pista:"Sus esporas sobreviven a la pasteurización."
 },
 
 {
 pregunta:"¿Qué controla crecimiento bacteriano?",
 opciones:[
-"pH ácido",
+"Sal",
 "Azúcar",
-"Sal"
+"pH ácido"
 ],
-correcta:0,
+correcta:2,
 pista:"Los jugos son ácidos."
 }
 ],
@@ -258,22 +260,22 @@ pista:"Puede crecer en refrigeración."
 {
 pregunta:"¿Dónde se encuentra Listeria?",
 opciones:[
-"Ambientes húmedos",
 "Ambientes secos",
+"Ambientes húmedos",
 "Aire"
 ],
-correcta:0,
+correcta:1,
 pista:"Superficies húmedas."
 },
 
 {
 pregunta:"¿Qué indica la presencia de Coliformes?",
 opciones:[
-"Falla en higiene",
 "Exceso de grasa",
+"Falla en higiene",
 "Mala pasteurización"
 ],
-correcta:0,
+correcta:1,
 pista:"Son indicadores de contaminación post-proceso."
 },
 
@@ -287,15 +289,15 @@ opciones:[
 correcta:0,
 pista:"Sus formas de resistencia sobreviven al calor."
 },
-  
+
 {
-pregunta:"¿Qué enfermedad causa?",
+pregunta:"¿Qué enfermedad causa Listeria?",
 opciones:[
-"Listeriosis",
 "Gripe",
+"Listeriosis",
 "Hepatitis"
 ],
-correcta:0,
+correcta:1,
 pista:"Puede ser grave."
 }
 ],
@@ -304,22 +306,22 @@ pista:"Puede ser grave."
 {
 pregunta:"¿Qué bacteria se asocia a carne?",
 opciones:[
-"Clostridium",
 "Salmonella",
+"Clostridium",
 "E.coli"
 ],
-correcta:0,
+correcta:1,
 pista:"Produce toxina botulínica."
 },
 
 {
 pregunta:"¿Qué favorece Clostridium?",
 opciones:[
-"Ambiente sin oxígeno",
 "Oxígeno alto",
+"Ambiente sin oxígeno",
 "Congelación"
 ],
-correcta:0,
+correcta:1,
 pista:"Ambiente anaerobio."
 },
 
@@ -348,11 +350,11 @@ pista:"Se asocia a contaminación durante el faenado."
 {
 pregunta:"¿Qué hacer si falla el Límite Crítico?",
 opciones:[
-"Acción correctiva",
 "Seguir produciendo",
+"Acción correctiva",
 "Lavar el empaque"
 ],
-correcta:0,
+correcta:1,
 pista:"Es la medida para retomar el control del proceso."
 },
 
@@ -372,11 +374,11 @@ pista:"El frío es clave."
 {
 pregunta:"¿Qué patógeno emergente afecta el tracto reproductivo y respiratorio?",
 opciones:[
-"Gallibacterium anatis",
 "Salmonella Pullorum",
+"Gallibacterium anatis",
 "Mycoplasma gallisepticum"
 ],
-correcta:0,
+correcta:1,
 pista:"Antes se conocía como Pasteurella haemolytica-like."
 },
 
@@ -394,44 +396,44 @@ pista:"Evalúa la inmunidad transferida desde la gallina reproductora."
 {
 pregunta:"¿Cómo se transmite Salmonella verticalmente al pollito?",
 opciones:[
-"Vía saco vitelino",
+"Contacto con el cascarón",
 "Por el aire del nido",
-"Contacto con el cascarón"
+"Vía saco vitelino"
 ],
-correcta:0,
+correcta:2,
 pista:"La bacteria infecta el huevo dentro de la madre antes de la postura."
 },
 
 {
 pregunta:"¿Qué prueba determina la resistencia bacteriana en el pollito?",
 opciones:[
-"Antibiograma",
+"Conteo en placa",
 "Prueba de ELISA",
-"Conteo en placa"
+"Antibiograma"
 ],
-correcta:0,
+correcta:2,
 pista:"Mide la sensibilidad de la bacteria ante diferentes antibiótico."
 },
 
 {
 pregunta:"¿Cuál es la muestra ideal para ELISA en pollitos?",
 opciones:[
-"Suero sanguíneo",
 "Hisopado cloacal",
+"Suero sanguíneo",
 "Plumas"
 ],
-correcta:0,
+correcta:1,
 pista:"Se extrae de la sangre para medir los títulos de anticuerpos."
 },
 
 {
 pregunta:"¿Qué hongo se busca en pulmones de pollitos de 1 día?",
 opciones:[
-"Aspergillus fumigatus",
+"Fusarium spp.",
 "Candida albicans",
-"Fusarium spp."
+"Aspergillus fumigatus."
 ],
-correcta:0,
+correcta:2,
 pista:"Causa la 'neumonía de la incubadora' por esporas en el ambiente."
 }
 ],
@@ -451,22 +453,22 @@ pista:"Demostración científica de que el patógeno no crece en el tiempo de an
 {
 pregunta:"¿Qué zonificación exige la norma para ensaladas listas?",
 opciones:[
-"Separación Área Sucia/Limpia",
+"Zonas de carga y descarga",
 "División por color de envase",
-"Zonas de carga y descarga"
+"Separación Área Sucia/Limpia"
 ],
-correcta:0,
+correcta:2,
 pista:"Barreras físicas estrictas para evitar que la tierra de los vegetales toque el producto final."
 },
 
 {
 pregunta:"¿En platos listos, ¿qué es la desinfección de manos según FSSC?",
 opciones:[
-"PPRO (PCC Operativo)",
 "PPR (Prerrequisito)",
+"PPRO (PCC Operativo)",
 "PCC (Punto Crítico)"
 ],
-correcta:0,
+correcta:1,
 pista:"Es una medida esencial para prevenir contaminación cruzada sin un límite numérico."
 },
 
@@ -495,11 +497,11 @@ pista:"Evitar lugares donde se acumulen residuos y se formen biofilms."
 {
 pregunta:"¿Qué registro de trazabilidad es vital en ensaladas preparadas?",
 opciones:[
-"Balance de masas",
+"Horario de los operarios",
 "Factura del transporte",
-"Horario de los operarios"
+"Balance de masas"
 ],
-correcta:0,
+correcta:2,
 pista:"Conciliar cuánta materia prima entró vs. cuánto producto terminado salió."
 },
 
