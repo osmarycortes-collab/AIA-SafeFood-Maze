@@ -83,7 +83,7 @@ function mostrarTarjeta(titulo,texto,boton,accion){
 document.getElementById("joystick").style.display="none"
 
 panelTitulo.innerText=titulo
-panelTexto.innerText=texto
+panelTexto.innerHTML=texto
 
 panelBotones.innerHTML=""
 
