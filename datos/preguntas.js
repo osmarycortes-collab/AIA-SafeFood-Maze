@@ -4,22 +4,22 @@ const PREGUNTAS = {
 {
 pregunta:"¿Qué favorece el crecimiento de mohos en granos almacenados?",
 opciones:[
-"Alta humedad",
 "Baja humedad",
+"Alta humedad",
 "Temperatura congelada"
 ],
-correcta:0,
+correcta:1,
 pista:"Los mohos crecen con humedad."
 },
 
 {
 pregunta:"¿Qué toxina produce Aspergillus flavus?",
 opciones:[
-"Aflatoxina",
+"Histamina",
 "Botulina",
-"Histamina"
+"Aflatoxina"
 ],
-correcta:0,
+correcta:2,
 pista:"Es una micotoxina común en granos."
 }
 ],
