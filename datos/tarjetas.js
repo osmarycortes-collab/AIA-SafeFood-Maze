@@ -129,5 +129,4 @@ Sigue avanzando y continúa aprendiendo.`,
         boton: "Generar certificado"
     }
 
-
 }
