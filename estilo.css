@@ -274,8 +274,8 @@ height:auto;
 }
 
 #btnMusica{
+display:inline-block;
 font-size:22px;
-padding:5px 10px;
 margin-left:10px;
 cursor:pointer;
 background:none;
