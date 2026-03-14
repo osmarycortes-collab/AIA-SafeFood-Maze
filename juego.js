@@ -302,7 +302,7 @@ return
 
 if(mapa[nf][nc]==="S"){
 
-if(preguntaActual < PUERTAS_NIVEL[nivelActual]){
+if(preguntaActual < PUERTAS_NIVEL[nivelActual-1]){
 
 alert("Debes responder todas las preguntas antes de salir del laberinto")
 return
