@@ -1,3 +1,10 @@
+html, body{
+margin:0;
+padding:0;
+overflow:hidden;
+touch-action:none;
+}
+
 body{
 text-align:center;
 font-family:Arial;
@@ -23,6 +30,11 @@ font-size:18px;
 canvas{
 border:4px solid black;
 background:#ddd;
+max-width:100%;
+height:auto;
+display:block;
+margin:auto;
+touch-action:none;
 }
 
 /* PANEL EDUCATIVO */
@@ -40,7 +52,6 @@ max-height:80vh;
 overflow-y:auto;
 border-radius:12px;
 box-shadow:0 0 25px rgba(0,0,0,0.35);
-z-index:100;
 }
 
 /* OCULTAR PANEL */
@@ -106,82 +117,50 @@ font-size:14px;
 ========================= */
 
 .certificado{
-
 background:white;
-
 padding:35px;
-
 margin:auto;
-
 max-width:650px;
-
 border:8px solid #d4af37;
-
 border-radius:8px;
-
 box-shadow:0 0 20px rgba(0,0,0,0.25);
-
 text-align:center;
-
 font-family:Georgia, serif;
-
+max-height:70vh;
+overflow-y:auto;
 }
 
 /* TITULO CERTIFICADO */
 
 .certificado h2{
-
 font-size:28px;
-
 margin-bottom:10px;
-
 letter-spacing:2px;
-
 color:#333;
-
 }
 
 /* NOMBRE JUGADOR */
 
 .certificado h3{
-
 font-size:24px;
-
 margin:15px 0;
-
 color:#000;
-
 }
 
 /* TEXTO CERTIFICADO */
 
 .certificado p{
-
 margin:2px 0;
-
 line-height:1.1;
-
 }
 
 /* DISCLAIMER FINAL */
 
 .certificado-disclaimer{
-
 font-style:italic;
-
 font-size:12px;
-
 margin-top:15px;
-
 color:#555;
-
-}
-
-/* SCROLL CERTIFICADO */
-
-.certificado{
-max-height:70vh;
-overflow-y:auto;
 }
 
 #controles{
@@ -206,58 +185,35 @@ background:#163a7a;
 /* JOYSTICK MOVIL */
 
 #joystick{
-
 position:fixed;
-
 bottom:20px;
-
 left:50%;
-
 transform:translateX(-50%);
-
 text-align:center;
-
 z-index:10;
-
 display:none;
-
 }
 
 #joystick button{
-
 width:60px;
 height:60px;
-
 border-radius:50%;
-
 border:none;
-
 background:rgba(223, 224, 226, 0.8);
-
 color:white;
-
 font-size:22px;
-
 margin:5px;
-
 box-shadow:0 4px 10px rgba(233, 228, 228, 0.3);
-
 }
 
 #joystick button:active{
-
 background:#163a7a;
-
 transform:scale(0.95);
-
 }
 
-canvas{
-max-width:100%;
-height:auto;
-display:block;
-margin:auto;
-}
+/* =========================
+   RESPONSIVE MOVIL
+========================= */
 
 @media (max-width:700px){
 
@@ -281,9 +237,7 @@ background:none;
 border:none;
 }
 
-/* =========================
-   Imagen enemigo tarjeta
-========================= */
+/* Imagen enemigo tarjeta */
 
 #panelTexto img{
 display:block;
@@ -292,13 +246,7 @@ max-width:180px !important;
 height:auto !important;
 }
 
-body{
-overflow:hidden;
-touch-action:none;
 }
-   
-}
-
 
 
 
