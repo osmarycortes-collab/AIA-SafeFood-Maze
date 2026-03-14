@@ -733,14 +733,18 @@ let touchStartY = 0
 
 canvas.addEventListener("touchstart", function(e){
 
+e.preventDefault()
+
 let t = e.touches[0]
 
 touchStartX = t.clientX
 touchStartY = t.clientY
 
-})
+},{passive:false})
 
 canvas.addEventListener("touchend", function(e){
+
+e.preventDefault()
 
 let t = e.changedTouches[0]
 
@@ -769,7 +773,7 @@ moverJugador(0,-1)
 
 }
 
-})
+},{passive:false})
 
 
 
