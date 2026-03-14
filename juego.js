@@ -457,12 +457,25 @@ enemigos.forEach(e=>{
 let dx = jugador.x - e.x
 let dy = jugador.y - e.y
 
-if(Math.abs(dx) < 150 && Math.abs(dy) < 150){
+/* DISTANCIA AL JUGADOR */
 
+let distancia = Math.sqrt(dx*dx + dy*dy)
+
+/* SI ESTA CERCA → PERSEGUIR */
+
+if(distancia < 200){
+
+if(Math.abs(dx) > Math.abs(dy)){
 e.dirX = Math.sign(dx)
+e.dirY = 0
+}else{
 e.dirY = Math.sign(dy)
+e.dirX = 0
+}
 
 }
+
+/* MOVIMIENTO */
 
 let nx = e.x + e.dirX * 2
 let ny = e.y + e.dirY * 2
@@ -470,13 +483,15 @@ let ny = e.y + e.dirY * 2
 let f = Math.floor(ny / CONFIG.tamCelda)
 let c = Math.floor(nx / CONFIG.tamCelda)
 
+/* SI CHOCA CON PARED → CAMBIAR DIRECCION */
+
 if(mapa[f][c] === 1 || mapa[f][c] === "D"){
 
-let dirs = [[1,0],[-1,0],[0,1],[0,-1]]
-let r = dirs[Math.floor(Math.random()*4)]
+let dirs=[[1,0],[-1,0],[0,1],[0,-1]]
+let r=dirs[Math.floor(Math.random()*4)]
 
-e.dirX = r[0]
-e.dirY = r[1]
+e.dirX=r[0]
+e.dirY=r[1]
 
 return
 
