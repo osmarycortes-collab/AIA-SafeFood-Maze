@@ -457,48 +457,53 @@ enemigos.forEach(e=>{
 let dx = jugador.x - e.x
 let dy = jugador.y - e.y
 
-/* DISTANCIA AL JUGADOR */
+/* DIRECCION HACIA EL JUGADOR */
 
-let distancia = Math.sqrt(dx*dx + dy*dy)
+let dirX = Math.sign(dx)
+let dirY = Math.sign(dy)
 
-/* SI ESTA CERCA → PERSEGUIR */
+/* POSICION ACTUAL */
 
-if(distancia < 200){
+let f = Math.floor(e.y / CONFIG.tamCelda)
+let c = Math.floor(e.x / CONFIG.tamCelda)
 
-if(Math.abs(dx) > Math.abs(dy)){
-e.dirX = Math.sign(dx)
-e.dirY = 0
-}else{
-e.dirY = Math.sign(dy)
-e.dirX = 0
-}
+/* INTENTAR MOVER EN X */
 
-}
+let nx = e.x + dirX * 2
+let ny = e.y
 
-/* MOVIMIENTO */
+let fx = Math.floor(ny / CONFIG.tamCelda)
+let cx = Math.floor(nx / CONFIG.tamCelda)
 
-let nx = e.x + e.dirX * 2
-let ny = e.y + e.dirY * 2
+if(mapa[fx][cx] !== 1 && mapa[fx][cx] !== "D"){
 
-let f = Math.floor(ny / CONFIG.tamCelda)
-let c = Math.floor(nx / CONFIG.tamCelda)
-
-/* SI CHOCA CON PARED → CAMBIAR DIRECCION */
-
-if(mapa[f][c] === 1 || mapa[f][c] === "D"){
-
-let dirs=[[1,0],[-1,0],[0,1],[0,-1]]
-let r=dirs[Math.floor(Math.random()*4)]
-
-e.dirX=r[0]
-e.dirY=r[1]
-
+e.x = nx
 return
 
 }
 
-e.x = nx
+/* SI NO PUEDE EN X → INTENTAR Y */
+
+nx = e.x
+ny = e.y + dirY * 2
+
+let fy = Math.floor(ny / CONFIG.tamCelda)
+let cy = Math.floor(nx / CONFIG.tamCelda)
+
+if(mapa[fy][cy] !== 1 && mapa[fy][cy] !== "D"){
+
 e.y = ny
+return
+
+}
+
+/* SI NO PUEDE → CAMBIO SUAVE */
+
+let dirs=[[1,0],[-1,0],[0,1],[0,-1]]
+let r=dirs[Math.floor(Math.random()*4)]
+
+e.x += r[0]*2
+e.y += r[1]*2
 
 })
 
