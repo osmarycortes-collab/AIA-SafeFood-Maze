@@ -616,21 +616,28 @@ return
 }
 
 mostrarNivel()
-return
+
+}
+
+function iniciarJuego(){
+
+panel.classList.add("oculto")
+
+juegoIniciado = true
+juegoPausado = false
 
 mapa = MAPAS[nivelActual]
 
-preguntaActual=0
+preguntaActual = 0
 
 tiempo = CONFIG.tiempoNiveles[nivelActual]
 
 spriteEnemigo.src = CONFIG.microorganismos[nivelActual]
+
 fondo.src = CONFIG.fondosPlantas[nivelActual]
 
 musicaNivel.src = CONFIG.musicaNiveles[nivelActual]
 musicaNivel.play()
-
-panel.classList.add("oculto")
 
 juegoPausado=false
 
@@ -638,7 +645,6 @@ buscarEntrada()
 crearEnemigos()
 
 }
-
 function reiniciarNivel(){
 
 document.getElementById("joystick").style.display="block"
