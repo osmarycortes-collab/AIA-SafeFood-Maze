@@ -123,12 +123,23 @@ function iniciarJuego(){
 
 panel.classList.add("oculto")
 
-document.getElementById("joystick").style.display="block"
+document.getElementById("joystick").style.display = "block"
 
-juegoIniciado=true
-juegoPausado=false
+mapa = MAPAS[nivelActual-1]
 
+preguntaActual = 0
+
+tiempo = CONFIG.tiempoNiveles[nivelActual]
+
+spriteEnemigo.src = CONFIG.microorganismos[nivelActual-1]
+
+fondo.src = CONFIG.fondosPlantas[nivelActual-1]
+
+musicaNivel.src = CONFIG.musicaNiveles[nivelActual]
 musicaNivel.play()
+
+juegoIniciado = true
+juegoPausado = false
 
 buscarEntrada()
 crearEnemigos()
@@ -636,7 +647,7 @@ tiempo = CONFIG.tiempoNiveles[nivelActual]
 
 spriteEnemigo.src = CONFIG.microorganismos[nivelActual]
 
-fondo.src = CONFIG.fondosPlantas[nivelActual]
+fondo.src = CONFIG.fondosPlantas[nivelActual-1]
 
 musicaNivel.src = CONFIG.musicaNiveles[nivelActual]
 musicaNivel.play()
