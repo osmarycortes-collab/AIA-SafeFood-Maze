@@ -447,7 +447,7 @@ ctx.fillRect(x,y,CONFIG.tamCelda,CONFIG.tamCelda)
 
 if(mapa[f][c]==="D"){
 
-ctx.fillStyle="orange"
+ctx.fillStyle="black"
 ctx.fillRect(x+8,y+8,CONFIG.tamCelda-16,CONFIG.tamCelda-16)
 
 }
