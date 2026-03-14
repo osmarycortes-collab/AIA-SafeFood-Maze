@@ -438,36 +438,80 @@ pista:"Causa la 'neumonía de la incubadora' por esporas en el ambiente."
 
 10:[
 {
-pregunta:"¿Qué bacteria es riesgo en alimentos listos?",
+pregunta:"¿En sándwiches RTE, ¿cómo exige FSSC 22000 validar la vida útil?",
 opciones:[
-"Listeria",
-"Salmonella",
-"E.coli"
+"Challenge Test de Listeria",
+"Prueba de sabor diaria",
+"Revisión de la etiqueta"
 ],
 correcta:0,
-pista:"Puede crecer en refrigeración."
+pista:"Demostración científica de que el patógeno no crece en el tiempo de anaquel."
 },
 
 {
-pregunta:"¿Dónde se encuentra?",
+pregunta:"¿Qué zonificación exige la norma para ensaladas listas?",
 opciones:[
-"Superficies contaminadas",
-"Aire limpio",
-"Agua potable"
+"Separación Área Sucia/Limpia",
+"División por color de envase",
+"Zonas de carga y descarga"
 ],
 correcta:0,
-pista:"Equipos contaminados."
+pista:"Barreras físicas estrictas para evitar que la tierra de los vegetales toque el producto final."
 },
 
 {
-pregunta:"¿Cómo prevenir contaminación?",
+pregunta:"¿En platos listos, ¿qué es la desinfección de manos según FSSC?",
 opciones:[
-"Limpieza y desinfección",
-"Congelar",
-"Añadir azúcar"
+"PPRO (PCC Operativo)",
+"PPR (Prerrequisito)",
+"PCC (Punto Crítico)"
 ],
 correcta:0,
-pista:"BPM es clave."
+pista:"Es una medida esencial para prevenir contaminación cruzada sin un límite numérico."
+},
+
+{
+pregunta:"¿Cómo gestiona FSSC 22000 un positivo de patógeno en un lote de sándwiches?",
+opciones:[
+"Procedimiento de Retirada (Recall)",
+"Reprocesar con calor",
+"Cambiar el lote de pan"
+],
+correcta:0,
+pista:"Gestión inmediata de productos no inocuos que ya salieron de la planta."
+},
+
+{
+pregunta:"¿Qué diseño sanitario exige la norma para picadoras de vegetales?",
+opciones:[
+"Ausencia de zonas muertas",
+"Cuchillas de acero brillante",
+"Máquinas de alta velocidad"
+],
+correcta:0,
+pista:"Evitar lugares donde se acumulen residuos y se formen biofilms."
+},
+
+{
+pregunta:"¿Qué registro de trazabilidad es vital en ensaladas preparadas?",
+opciones:[
+"Balance de masas",
+"Factura del transporte",
+"Horario de los operarios"
+],
+correcta:0,
+pista:"Conciliar cuánta materia prima entró vs. cuánto producto terminado salió."
+},
+
+{
+pregunta:"¿Qué busca el Food Defense en una planta de platos listos?",
+opciones:[
+"Prevenir sabotaje intencional",
+"Controlar bacterias del aire",
+"Uso de cofias y guantes"
+],
+correcta:0,
+pista:"Protección contra alguien que quiera contaminar el alimento a propósito."
 }
 ]
 
