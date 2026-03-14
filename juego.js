@@ -726,5 +726,50 @@ document.getElementById("left").addEventListener("touchstart",()=>moverJugador(-
 
 document.getElementById("right").addEventListener("touchstart",()=>moverJugador(1,0))
 
+/* SWIPE MOVIL */
+
+let touchStartX = 0
+let touchStartY = 0
+
+canvas.addEventListener("touchstart", function(e){
+
+let t = e.touches[0]
+
+touchStartX = t.clientX
+touchStartY = t.clientY
+
+})
+
+canvas.addEventListener("touchend", function(e){
+
+let t = e.changedTouches[0]
+
+let dx = t.clientX - touchStartX
+let dy = t.clientY - touchStartY
+
+if(Math.abs(dx) > Math.abs(dy)){
+
+if(dx > 30){
+moverJugador(1,0)
+}
+
+if(dx < -30){
+moverJugador(-1,0)
+}
+
+}else{
+
+if(dy > 30){
+moverJugador(0,1)
+}
+
+if(dy < -30){
+moverJugador(0,-1)
+}
+
+}
+
+})
+
 
 
