@@ -347,8 +347,9 @@ return false
 
 function moverJugador(dx,dy){
 
-direccion.x = dx
-direccion.y = dy
+/* guardar direccion siguiente (pacman style) */
+siguienteDireccion.x = dx
+siguienteDireccion.y = dy
 
 }
 
@@ -362,10 +363,24 @@ if(ahora - ultimoMovimiento < velocidadJugador) return
 
 ultimoMovimiento = ahora
 
-if(direccion.x === 0 && direccion.y === 0) return
-
 let f = Math.floor(jugador.y / CONFIG.tamCelda)
 let c = Math.floor(jugador.x / CONFIG.tamCelda)
+
+/* INTENTAR CAMBIAR DIRECCION (GIRO SUAVE) */
+
+let tf = f + siguienteDireccion.y
+let tc = c + siguienteDireccion.x
+
+if(mapa[tf][tc] !== 1){
+
+direccion.x = siguienteDireccion.x
+direccion.y = siguienteDireccion.y
+
+}
+
+/* SI NO HAY DIRECCION NO MOVER */
+
+if(direccion.x === 0 && direccion.y === 0) return
 
 let nf = f + direccion.y
 let nc = c + direccion.x
