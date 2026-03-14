@@ -61,30 +61,6 @@ o en tu contra.
         boton: "Comenzar"
     },
 
-
-    nivel: {
-
-        titulo: "Nivel 1 – Planta de granos",
-
-        mensaje: `Enemigo: Aspergillus flavus
-Tipo: hongo
-Fuente: granos almacenados
-Enfermedad: Aflatoxicosis
-
-Síntomas:
-• Daño hepático
-• Vómitos
-• Dolor abdominal
-
-Prevención:
-Control de humedad y Almacenamiento adecuado
-
-¡Evita que te atrape!`,
-
-        boton: "Continuar"
-    },
-
-
     atrapado: {
 
         mensaje: `Recuerda:
