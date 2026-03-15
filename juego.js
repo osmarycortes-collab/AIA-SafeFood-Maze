@@ -970,7 +970,7 @@ juegoPausado = false
 /* INICIO */
 
 actualizarHUD()
-iniciarTarjetas()
+// iniciarTarjetas()
 
 loop()
 
