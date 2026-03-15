@@ -113,8 +113,6 @@ const panelBotones=document.getElementById("panelBotones")
 
 function mostrarTarjeta(titulo,texto,boton,accion){
 
-document.getElementById("joystick").style.display="none"
-
 panelTitulo.innerText=titulo
 panelTexto.innerHTML=texto
 
@@ -180,8 +178,6 @@ iniciarJuego
 function iniciarJuego(){
 
 panel.classList.add("oculto")
-
-document.getElementById("joystick").style.display = "block"
 
 mapa = MAPAS[nivelActual-1]
 
@@ -779,8 +775,6 @@ crearEnemigos()
 
 }
 function reiniciarNivel(){
-
-document.getElementById("joystick").style.display="block"
 
 tiempo = CONFIG.tiempoNiveles[nivelActual]
 
