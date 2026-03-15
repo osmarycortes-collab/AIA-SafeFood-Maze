@@ -1,3 +1,7 @@
+/* =========================
+   BASE
+========================= */
+
 html, body{
 margin:0;
 padding:0;
@@ -5,52 +9,79 @@ padding:0;
 
 body{
 text-align:center;
-font-family:Arial;
+font-family:Arial, Helvetica, sans-serif;
 background:#f0f0f0;
 touch-action: manipulation;
 }
 
-#logo{
-width:260px;
-margin-top:10px;
-}
 
-.autor{
-font-size:14px;
-color:#555;
-}
+/* =========================
+   HUD DEL JUEGO
+========================= */
 
 #hud{
 margin:10px;
 font-size:18px;
 }
 
+#btnMusica{
+cursor:pointer;
+background:none;
+border:none;
+font-size:20px;
+}
+
+
+/* =========================
+   LABERINTO
+========================= */
+
 canvas{
-border:4px solid black;
+border:4px solid #111;
 background:#ddd;
 max-width:100%;
 height:auto;
 display:block;
 margin:auto;
 touch-action:none;
+border-radius:6px;
 }
 
-/* PANEL EDUCATIVO */
+
+/* =========================
+   PANEL EDUCATIVO
+========================= */
 
 #panel{
+
 position:fixed;
+
 top:50%;
 left:50%;
+
 transform:translate(-50%,-50%);
-z-index:300;
+
+z-index:600;
+
 background:white;
+
 padding:30px;
-width:620px;
+
+width:90%;
+max-width:620px;
+
 max-height:80vh;
+
 overflow-y:auto;
-border-radius:12px;
-box-shadow:0 0 25px rgba(0,0,0,0.35);
+
+border-radius:16px;
+
+box-shadow:0 0 35px rgba(0,0,0,0.4);
+
+animation:aparecer .35s ease;
+
 }
+
 
 /* OCULTAR PANEL */
 
@@ -58,60 +89,100 @@ box-shadow:0 0 25px rgba(0,0,0,0.35);
 display:none;
 }
 
-/* TEXTO EDUCATIVO */
+
+/* TITULO TARJETA */
+
+#panelTitulo{
+font-size:28px;
+margin-bottom:15px;
+color:#111;
+}
+
+
+/* TEXTO TARJETA */
 
 #panelTexto{
 text-align:justify;
-line-height:1.6;
+line-height:1.7;
 white-space:pre-line;
 margin-bottom:15px;
+font-size:16px;
+color:#222;
 }
+
+
+/* IMAGEN TARJETA */
+
+#panelTexto img{
+display:block;
+margin:20px auto;
+max-width:200px;
+height:auto;
+}
+
 
 /* OPCIONES DE PREGUNTA */
 
 .opcion{
 display:block;
-margin:6px auto;
-padding:10px;
-width:90%;
+margin:8px auto;
+padding:12px;
+width:92%;
 cursor:pointer;
 background:#f5f5f5;
 border:1px solid #ccc;
-border-radius:6px;
+border-radius:8px;
 font-size:14px;
+transition:.2s;
 }
 
 .opcion:hover{
 background:#e8f4ff;
+transform:scale(1.02);
 }
 
-/* BOTONES DEL PANEL */
+
+/* BOTONES PANEL */
 
 #panelBotones button{
-margin:8px;
-padding:9px 16px;
+
+margin:10px;
+
+padding:12px 22px;
+
 cursor:pointer;
-border-radius:5px;
-border:1px solid #aaa;
-background:#f7f7f7;
+
+border-radius:8px;
+
+border:none;
+
+background:#0b0b0b;
+
+color:#7fffd4;
+
 font-weight:bold;
+
+letter-spacing:1px;
+
+box-shadow:0 0 10px rgba(0,255,200,0.5);
+
+transition:.2s;
+
 }
 
 #panelBotones button:hover{
-background:#e6f2ff;
+
+background:#000;
+
+box-shadow:0 0 18px rgba(0,255,200,0.8);
+
+transform:scale(1.05);
+
 }
 
-/* CAMPO CERTIFICADO */
-
-#nombreJugador{
-width:80%;
-padding:8px;
-margin-top:10px;
-font-size:14px;
-}
 
 /* =========================
-   CERTIFICADO ELEGANTE
+   CERTIFICADO
 ========================= */
 
 .certificado{
@@ -128,8 +199,6 @@ max-height:70vh;
 overflow-y:auto;
 }
 
-/* TITULO CERTIFICADO */
-
 .certificado h2{
 font-size:28px;
 margin-bottom:10px;
@@ -137,22 +206,16 @@ letter-spacing:2px;
 color:#333;
 }
 
-/* NOMBRE JUGADOR */
-
 .certificado h3{
 font-size:24px;
 margin:15px 0;
 color:#000;
 }
 
-/* TEXTO CERTIFICADO */
-
 .certificado p{
 margin:2px 0;
-line-height:1.1;
+line-height:1.2;
 }
-
-/* DISCLAIMER FINAL */
 
 .certificado-disclaimer{
 font-style:italic;
@@ -160,6 +223,11 @@ font-size:12px;
 margin-top:15px;
 color:#555;
 }
+
+
+/* =========================
+   CONTROLES
+========================= */
 
 #controles{
 margin-top:15px;
@@ -180,6 +248,142 @@ color:white;
 background:#163a7a;
 }
 
+
+/* =========================
+   PANTALLA INICIO
+========================= */
+
+#pantallaInicio{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+z-index:500;
+
+overflow:hidden;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+background:black;
+
+}
+
+
+/* IMAGEN INICIO */
+
+#imagenInicio{
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+z-index:1;
+
+}
+
+
+/* BOTONES MENU */
+
+#menuBotones{
+
+position:absolute;
+
+bottom:12%;
+
+width:100%;
+
+text-align:center;
+
+z-index:2;
+
+}
+
+#menuBotones button{
+
+display:block;
+
+margin:14px auto;
+
+padding:18px 45px;
+
+font-size:26px;
+
+font-weight:bold;
+
+border:none;
+
+border-radius:14px;
+
+cursor:pointer;
+
+background:#0b0b0b;
+
+color:#7fffd4;
+
+letter-spacing:3px;
+
+box-shadow:
+0 0 12px rgba(0,255,200,0.6),
+0 0 30px rgba(0,255,200,0.25);
+
+transition:.25s;
+
+}
+
+#menuBotones button:hover{
+
+background:#000;
+
+box-shadow:
+0 0 18px rgba(0,255,200,0.9),
+0 0 40px rgba(0,255,200,0.4);
+
+transform:scale(1.05);
+
+}
+
+#menuBotones button:active{
+
+transform:scale(0.96);
+
+box-shadow:0 0 8px rgba(0,255,200,0.8);
+
+}
+
+
+/* =========================
+   ANIMACION TARJETAS
+========================= */
+
+@keyframes aparecer{
+
+from{
+opacity:0;
+transform:translate(-50%,-60%);
+}
+
+to{
+opacity:1;
+transform:translate(-50%,-50%);
+}
+
+}
+
+
 /* =========================
    RESPONSIVE MOVIL
 ========================= */
@@ -187,7 +391,7 @@ background:#163a7a;
 @media (max-width:700px){
 
 #panel{
-width:90%;
+width:92%;
 max-height:80vh;
 overflow:auto;
 }
@@ -201,12 +405,7 @@ height:auto;
 display:inline-block;
 font-size:22px;
 margin-left:10px;
-cursor:pointer;
-background:none;
-border:none;
 }
-
-/* Imagen enemigo tarjeta */
 
 #panelTexto img{
 display:block;
@@ -215,59 +414,19 @@ max-width:180px !important;
 height:auto !important;
 }
 
-/* =========================
-   PANTALLA INICIO
-========================= */
-
-#pantallaInicio{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:500;
-overflow:hidden;
-}
-
-#imagenInicio{
-width:100%;
-height:100%;
-object-fit:cover;
-position:absolute;
-top:0;
-left:0;
-}
-
-#menuBotones{
-position:absolute;
-bottom:15%;
-width:100%;
-text-align:center;
-}
-
 #menuBotones button{
-display:block;
-margin:12px auto;
-padding:16px 40px;
+
+font-size:22px;
+padding:16px 35px;
+
+}
+
+#panelTitulo{
 font-size:24px;
-font-weight:bold;
-border:none;
-border-radius:10px;
-cursor:pointer;
-background:#111;
-color:#7fffd4;
-letter-spacing:2px;
-box-shadow:0 0 12px rgba(0,255,200,0.5);
 }
 
-#menuBotones button:hover{
-background:#000;
-box-shadow:0 0 20px rgba(0,255,200,0.8);
-}
-   
+#panelTexto{
+font-size:15px;
 }
 
-
-
-
-
+}
