@@ -776,11 +776,11 @@ crearEnemigos()
 }
 function reiniciarNivel(){
 
-tiempo = CONFIG.tiempoNiveles[nivelActual]
+tiempo = CONFIG.tiempoNiveles[nivelActual-1]
 
 preguntaActual = 0
 
-mapa = MAPAS[nivelActual]
+mapa = MAPAS[nivelActual-1]
 
 buscarEntrada()
 
