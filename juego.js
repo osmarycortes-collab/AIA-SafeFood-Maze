@@ -398,15 +398,24 @@ if(mapa[nf][nc] === "S"){
 
 if(preguntaActual < PUERTAS_NIVEL[nivelActual-1]){
 
+if(!mensajeSalidaMostrado){
+
+mensajeSalidaMostrado = true
+
 alert("Debes responder todas las preguntas antes de salir del laberinto")
 
-/* detener movimiento */
-direccion.x = 0
-direccion.y = 0
+setTimeout(()=>{
+mensajeSalidaMostrado = false
+},500)
 
-/* volver a la celda anterior */
+}
+
+/* retroceder una celda */
 jugador.x = c * CONFIG.tamCelda
 jugador.y = f * CONFIG.tamCelda
+
+direccion.x = 0
+direccion.y = 0
 
 return
 }
