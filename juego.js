@@ -1029,31 +1029,34 @@ moverJugador(0,-1)
    MENU PRINCIPAL
 ========================= */
 
+document.addEventListener("DOMContentLoaded", () => {
+
 const pantallaInicio = document.getElementById("pantallaInicio")
 
-document.getElementById("btnJugar").onclick = () =>{
+document.getElementById("btnJugar").onclick = () => {
 
-pantallaInicio.style.display="none"
+pantallaInicio.style.display = "none"
 
 mostrarNivel()
 
 }
 
-document.getElementById("btnInstrucciones").onclick = () =>{
+document.getElementById("btnInstrucciones").onclick = () => {
 
-document.getElementById("pantallaInicio").style.display="none"
+pantallaInicio.style.display = "none"
 
 mostrarInstrucciones()
 
 }
 
-document.getElementById("btnCreditos").onclick = () =>{
+document.getElementById("btnCreditos").onclick = () => {
 
-document.getElementById("pantallaInicio").style.display="none"
+pantallaInicio.style.display = "none"
 
 iniciarTarjetas()
 
 }
 
+})
 
 
