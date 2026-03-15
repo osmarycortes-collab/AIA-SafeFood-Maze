@@ -261,41 +261,66 @@ jugador.y=f*CONFIG.tamCelda
 
 /* CREAR ENEMIGOS */
 
-function crearEnemigos(){
+function moverEnemigos(){
 
-enemigos = []
+let ahora = Date.now()
 
-let cantidad = [1,1,2,2,3,3,4,4,5,6][nivelActual-1]
+if(ahora - ultimoMovimientoEnemigo < velocidadEnemigo) return
 
-for(let i=0;i<cantidad;i++){
+ultimoMovimientoEnemigo = ahora
 
-let colocado = false
+enemigos.forEach(e=>{
 
-while(!colocado){
+let opciones = []
 
-let f = Math.floor(Math.random()*CONFIG.filas)
-let c = Math.floor(Math.random()*CONFIG.columnas)
+let f = Math.floor(e.y / CONFIG.tamCelda)
+let c = Math.floor(e.x / CONFIG.tamCelda)
 
-/* verificar que la celda esté libre */
-if(mapa[f][c] !== 1 && mapa[f][c] !== "E" && mapa[f][c] !== "S"){
+/* ARRIBA */
+if(mapa[f-1] && mapa[f-1][c] !== 1){
+opciones.push({x:0,y:-1})
+}
 
-enemigos.push({
+/* ABAJO */
+if(mapa[f+1] && mapa[f+1][c] !== 1){
+opciones.push({x:0,y:1})
+}
 
-x: c * CONFIG.tamCelda,
-y: f * CONFIG.tamCelda,
+/* IZQUIERDA */
+if(mapa[f][c-1] !== 1){
+opciones.push({x:-1,y:0})
+}
 
-dirX:0,
-dirY:0
+/* DERECHA */
+if(mapa[f][c+1] !== 1){
+opciones.push({x:1,y:0})
+}
+
+/* elegir dirección que acerque al jugador */
+
+let mejor = null
+let mejorDist = Infinity
+
+opciones.forEach(d=>{
+
+let nx = e.x + d.x * CONFIG.tamCelda
+let ny = e.y + d.y * CONFIG.tamCelda
+
+let dist = Math.abs(jugador.x - nx) + Math.abs(jugador.y - ny)
+
+if(dist < mejorDist){
+mejorDist = dist
+mejor = d
+}
 
 })
 
-colocado = true
-
+if(mejor){
+e.x += mejor.x * CONFIG.tamCelda
+e.y += mejor.y * CONFIG.tamCelda
 }
 
-}
-
-}
+})
 
 }
 
