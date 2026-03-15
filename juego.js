@@ -35,7 +35,7 @@ let ultimoMovimiento = 0
 let velocidadJugador = 120
 
 let ultimoMovimientoEnemigo = 0
-let velocidadEnemigo = 400
+let velocidadEnemigo = 180
 
 let enemigos = []
 
