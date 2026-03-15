@@ -1023,5 +1023,31 @@ moverJugador(0,-1)
 
 },{passive:false})
 
+/* =========================
+   MENU PRINCIPAL
+========================= */
+
+const pantallaInicio = document.getElementById("pantallaInicio")
+
+document.getElementById("btnJugar").onclick = () =>{
+
+pantallaInicio.style.display="none"
+
+mostrarTarjetaNivel()
+
+}
+
+document.getElementById("btnInstrucciones").onclick = () =>{
+
+mostrarTarjetaInstrucciones()
+
+}
+
+document.getElementById("btnCreditos").onclick = () =>{
+
+mostrarTarjetaBienvenida()
+
+}
+
 
 
