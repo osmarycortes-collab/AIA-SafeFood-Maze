@@ -481,12 +481,12 @@ enemigos.forEach(e=>{
 let dx = jugador.x - e.x
 let dy = jugador.y - e.y
 
-/* DIRECCION HACIA EL JUGADOR */
+/* direccion hacia jugador */
 
 let dirX = Math.sign(dx)
 let dirY = Math.sign(dy)
 
-/* INTENTAR MOVER EN X */
+/* intentar mover en X */
 
 let nx = e.x + dirX * 2
 let ny = e.y
@@ -499,7 +499,7 @@ e.x = nx
 return
 }
 
-/* SI NO PUEDE EN X → INTENTAR Y */
+/* si no puede en X intentar Y */
 
 nx = e.x
 ny = e.y + dirY * 2
@@ -510,6 +510,31 @@ c = Math.floor(nx / CONFIG.tamCelda)
 if(mapa[f][c] !== 1 && mapa[f][c] !== "D"){
 e.y = ny
 return
+}
+
+/* si tampoco puede, mover aleatorio */
+
+let dirs = [
+{dx:1,dy:0},
+{dx:-1,dy:0},
+{dx:0,dy:1},
+{dx:0,dy:-1}
+]
+
+for(let d of dirs){
+
+nx = e.x + d.dx * 2
+ny = e.y + d.dy * 2
+
+f = Math.floor(ny / CONFIG.tamCelda)
+c = Math.floor(nx / CONFIG.tamCelda)
+
+if(mapa[f][c] !== 1 && mapa[f][c] !== "D"){
+e.x = nx
+e.y = ny
+return
+}
+
 }
 
 })
