@@ -261,6 +261,31 @@ jugador.y=f*CONFIG.tamCelda
 
 /* CREAR ENEMIGOS */
 
+function crearEnemigos(){
+
+enemigos = []
+
+let cantidad = [1,1,2,2,3,3,4,4,5,6][nivelActual-1]
+
+for(let i=0;i<cantidad;i++){
+
+enemigos.push({
+
+x: canvas.width - CONFIG.tamCelda * 2,
+y: canvas.height - CONFIG.tamCelda * 2,
+
+dirX:0,
+dirY:0
+
+})
+
+}
+
+}
+
+
+/* MOVER ENEMIGOS */
+
 function moverEnemigos(){
 
 let ahora = Date.now()
@@ -286,8 +311,10 @@ let f = Math.floor(ny / CONFIG.tamCelda)
 let c = Math.floor(nx / CONFIG.tamCelda)
 
 if(mapa[f] && mapa[f][c] !== 1){
+
 e.x = nx
 return
+
 }
 
 /* intentar mover vertical */
@@ -299,8 +326,10 @@ f = Math.floor(ny / CONFIG.tamCelda)
 c = Math.floor(nx / CONFIG.tamCelda)
 
 if(mapa[f] && mapa[f][c] !== 1){
+
 e.y = ny
 return
+
 }
 
 })
