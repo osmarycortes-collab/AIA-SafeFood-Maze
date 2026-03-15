@@ -403,8 +403,8 @@ alert("Debes responder todas las preguntas antes de salir del laberinto")
 juegoPausado = false
 
 /* retroceder una celda */
-jugador.x = (c - direccion.x) * CONFIG.tamCelda
-jugador.y = (f - direccion.y) * CONFIG.tamCelda
+jugador.x = c * CONFIG.tamCelda
+jugador.y = f * CONFIG.tamCelda
 
 direccion.x = 0
 direccion.y = 0
