@@ -276,7 +276,8 @@ while(!colocado){
 let f = Math.floor(Math.random()*CONFIG.filas)
 let c = Math.floor(Math.random()*CONFIG.columnas)
 
-/* verificar que no sea pared */
+/* evitar paredes, entrada y salida */
+
 if(mapa[f][c] !== 1 && mapa[f][c] !== "E" && mapa[f][c] !== "S"){
 
 enemigos.push({
@@ -285,7 +286,9 @@ x: c * CONFIG.tamCelda,
 y: f * CONFIG.tamCelda,
 
 dirX:0,
-dirY:0
+dirY:0,
+
+velocidad: 1 + (nivelActual * 0.3)
 
 })
 
@@ -299,6 +302,8 @@ colocado = true
 
 }
 
+
+
 /* MOVER ENEMIGOS */
 
 function moverEnemigos(){
@@ -311,54 +316,67 @@ ultimoMovimientoEnemigo = ahora
 
 enemigos.forEach(e=>{
 
-let opciones = []
+let dx = jugador.x - e.x
+let dy = jugador.y - e.y
 
-let f = Math.floor(e.y / CONFIG.tamCelda)
-let c = Math.floor(e.x / CONFIG.tamCelda)
+let dirX = 0
+let dirY = 0
 
-/* ARRIBA */
-if(mapa[f-1] && mapa[f-1][c] !== 1){
-opciones.push({x:0,y:-1})
-}
+/* decidir dirección principal */
 
-/* ABAJO */
-if(mapa[f+1] && mapa[f+1][c] !== 1){
-opciones.push({x:0,y:1})
-}
+if(Math.abs(dx) > Math.abs(dy)){
 
-/* IZQUIERDA */
-if(mapa[f][c-1] !== 1){
-opciones.push({x:-1,y:0})
-}
+dirX = Math.sign(dx)
 
-/* DERECHA */
-if(mapa[f][c+1] !== 1){
-opciones.push({x:1,y:0})
-}
+}else{
 
-let mejor = null
-let mejorDist = Infinity
-
-opciones.forEach(d=>{
-
-let nx = e.x + d.x * CONFIG.tamCelda
-let ny = e.y + d.y * CONFIG.tamCelda
-
-let dist = Math.abs(jugador.x - nx) + Math.abs(jugador.y - ny)
-
-if(dist < mejorDist){
-
-mejorDist = dist
-mejor = d
+dirY = Math.sign(dy)
 
 }
 
-})
+/* calcular siguiente posición */
 
-if(mejor){
+let nx = e.x + dirX * e.velocidad
+let ny = e.y + dirY * e.velocidad
 
-e.x += mejor.x * CONFIG.tamCelda
-e.y += mejor.y * CONFIG.tamCelda
+let f = Math.floor(ny / CONFIG.tamCelda)
+let c = Math.floor(nx / CONFIG.tamCelda)
+
+/* verificar pared */
+
+if(mapa[f] && mapa[f][c] !== 1){
+
+e.x = nx
+e.y = ny
+
+}else{
+
+/* intentar dirección alternativa */
+
+nx = e.x + Math.sign(dx) * e.velocidad
+ny = e.y
+
+f = Math.floor(ny / CONFIG.tamCelda)
+c = Math.floor(nx / CONFIG.tamCelda)
+
+if(mapa[f] && mapa[f][c] !== 1){
+
+e.x = nx
+return
+
+}
+
+nx = e.x
+ny = e.y + Math.sign(dy) * e.velocidad
+
+f = Math.floor(ny / CONFIG.tamCelda)
+c = Math.floor(nx / CONFIG.tamCelda)
+
+if(mapa[f] && mapa[f][c] !== 1){
+
+e.y = ny
+
+}
 
 }
 
