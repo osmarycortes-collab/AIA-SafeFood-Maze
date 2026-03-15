@@ -1041,11 +1041,15 @@ mostrarNivel()
 
 document.getElementById("btnInstrucciones").onclick = () =>{
 
+document.getElementById("pantallaInicio").style.display="none"
+
 mostrarInstrucciones()
 
 }
 
 document.getElementById("btnCreditos").onclick = () =>{
+
+document.getElementById("pantallaInicio").style.display="none"
 
 iniciarTarjetas()
 
