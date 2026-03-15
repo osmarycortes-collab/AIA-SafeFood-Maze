@@ -311,39 +311,54 @@ ultimoMovimientoEnemigo = ahora
 
 enemigos.forEach(e=>{
 
-let dx = jugador.x - e.x
-let dy = jugador.y - e.y
+let opciones = []
 
-let dirX = Math.sign(dx)
-let dirY = Math.sign(dy)
+let f = Math.floor(e.y / CONFIG.tamCelda)
+let c = Math.floor(e.x / CONFIG.tamCelda)
 
-/* intentar mover horizontal */
+/* ARRIBA */
+if(mapa[f-1] && mapa[f-1][c] !== 1){
+opciones.push({x:0,y:-1})
+}
 
-let nx = e.x + dirX * 2
-let ny = e.y
+/* ABAJO */
+if(mapa[f+1] && mapa[f+1][c] !== 1){
+opciones.push({x:0,y:1})
+}
 
-let f = Math.floor(ny / CONFIG.tamCelda)
-let c = Math.floor(nx / CONFIG.tamCelda)
+/* IZQUIERDA */
+if(mapa[f][c-1] !== 1){
+opciones.push({x:-1,y:0})
+}
 
-if(mapa[f] && mapa[f][c] !== 1){
+/* DERECHA */
+if(mapa[f][c+1] !== 1){
+opciones.push({x:1,y:0})
+}
 
-e.x = nx
-return
+let mejor = null
+let mejorDist = Infinity
+
+opciones.forEach(d=>{
+
+let nx = e.x + d.x * CONFIG.tamCelda
+let ny = e.y + d.y * CONFIG.tamCelda
+
+let dist = Math.abs(jugador.x - nx) + Math.abs(jugador.y - ny)
+
+if(dist < mejorDist){
+
+mejorDist = dist
+mejor = d
 
 }
 
-/* intentar mover vertical */
+})
 
-nx = e.x
-ny = e.y + dirY * 2
+if(mejor){
 
-f = Math.floor(ny / CONFIG.tamCelda)
-c = Math.floor(nx / CONFIG.tamCelda)
-
-if(mapa[f] && mapa[f][c] !== 1){
-
-e.y = ny
-return
+e.x += mejor.x * CONFIG.tamCelda
+e.y += mejor.y * CONFIG.tamCelda
 
 }
 
