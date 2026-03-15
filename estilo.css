@@ -180,35 +180,6 @@ color:white;
 background:#163a7a;
 }
 
-/* JOYSTICK MOVIL */
-
-#joystick{
-position:fixed;
-bottom:20px;
-left:50%;
-transform:translateX(-50%);
-text-align:center;
-z-index:10;
-display:none;
-}
-
-#joystick button{
-width:60px;
-height:60px;
-border-radius:50%;
-border:none;
-background:rgba(223, 224, 226, 0.8);
-color:white;
-font-size:22px;
-margin:5px;
-box-shadow:0 4px 10px rgba(233, 228, 228, 0.3);
-}
-
-#joystick button:active{
-background:#163a7a;
-transform:scale(0.95);
-}
-
 /* =========================
    RESPONSIVE MOVIL
 ========================= */
