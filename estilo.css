@@ -476,3 +476,24 @@ display:none;
 }
 
 }
+
+#btnVolver{
+
+position:absolute;
+left:10px;
+top:5px;
+
+background:#111;
+color:#7fffd4;
+
+border:none;
+border-radius:8px;
+
+padding:6px 12px;
+
+font-size:14px;
+cursor:pointer;
+
+box-shadow:0 0 10px rgba(0,255,200,0.6);
+
+}
