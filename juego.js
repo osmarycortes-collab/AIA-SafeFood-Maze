@@ -401,6 +401,9 @@ if(mapa[nf][nc] === "S"){
 if(preguntaActual < PUERTAS_NIVEL[nivelActual-1]){
 
 alert("Debes responder todas las preguntas antes de salir del laberinto")
+direccion.x = 0
+direccion.y = 0
+
 return
 
 }
