@@ -215,6 +215,56 @@ max-width:180px !important;
 height:auto !important;
 }
 
+/* =========================
+   PANTALLA INICIO
+========================= */
+
+#pantallaInicio{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:500;
+overflow:hidden;
+}
+
+#imagenInicio{
+width:100%;
+height:100%;
+object-fit:cover;
+position:absolute;
+top:0;
+left:0;
+}
+
+#menuBotones{
+position:absolute;
+bottom:15%;
+width:100%;
+text-align:center;
+}
+
+#menuBotones button{
+display:block;
+margin:12px auto;
+padding:16px 40px;
+font-size:24px;
+font-weight:bold;
+border:none;
+border-radius:10px;
+cursor:pointer;
+background:#111;
+color:#7fffd4;
+letter-spacing:2px;
+box-shadow:0 0 12px rgba(0,255,200,0.5);
+}
+
+#menuBotones button:hover{
+background:#000;
+box-shadow:0 0 20px rgba(0,255,200,0.8);
+}
+   
 }
 
 
