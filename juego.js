@@ -1033,19 +1033,19 @@ document.getElementById("btnJugar").onclick = () =>{
 
 pantallaInicio.style.display="none"
 
-mostrarTarjetaNivel()
+mostrarNivel()
 
 }
 
 document.getElementById("btnInstrucciones").onclick = () =>{
 
-mostrarTarjetaInstrucciones()
+mostrarInstrucciones()
 
 }
 
 document.getElementById("btnCreditos").onclick = () =>{
 
-mostrarTarjetaBienvenida()
+iniciarTarjetas()
 
 }
 
