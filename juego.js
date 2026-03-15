@@ -805,16 +805,6 @@ iniciarTarjetas()
 
 loop()
 
-/* CONTROLES TACTILES */
-
-document.getElementById("up").addEventListener("touchstart",()=>moverJugador(0,-1))
-
-document.getElementById("down").addEventListener("touchstart",()=>moverJugador(0,1))
-
-document.getElementById("left").addEventListener("touchstart",()=>moverJugador(-1,0))
-
-document.getElementById("right").addEventListener("touchstart",()=>moverJugador(1,0))
-
 /* SWIPE MOVIL */
 
 let touchStartX = 0
