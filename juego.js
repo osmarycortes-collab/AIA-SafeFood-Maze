@@ -1033,6 +1033,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const pantallaInicio = document.getElementById("pantallaInicio")
 
+document.getElementById("btnVolver").onclick = () => {
+
+location.reload()
+
+}
+
 document.getElementById("btnJugar").onclick = () => {
 
 pantallaInicio.style.display = "none"
