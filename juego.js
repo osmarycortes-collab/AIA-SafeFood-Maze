@@ -396,7 +396,11 @@ if(mapa[nf][nc] === "S"){
 
 if(preguntaActual < PUERTAS_NIVEL[nivelActual-1]){
 
+juegoPausado = true
+
 alert("Debes responder todas las preguntas antes de salir del laberinto")
+
+juegoPausado = false
 
 direccion.x = 0
 direccion.y = 0
@@ -407,7 +411,6 @@ jugador.y = f * CONFIG.tamCelda
 
 return
 }
-
 juegoPausado = true
 musicaNivel.pause()
 
