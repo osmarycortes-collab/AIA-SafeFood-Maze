@@ -263,18 +263,37 @@ jugador.y=f*CONFIG.tamCelda
 
 function crearEnemigos(){
 
-enemigos=[]
+enemigos = []
 
-let cantidad=[1,1,2,2,3,3,4,4,5,6][nivelActual-1]
+let cantidad = [1,1,2,2,3,3,4,4,5,6][nivelActual-1]
 
 for(let i=0;i<cantidad;i++){
 
+let colocado = false
+
+while(!colocado){
+
+let f = Math.floor(Math.random()*CONFIG.filas)
+let c = Math.floor(Math.random()*CONFIG.columnas)
+
+/* verificar que la celda esté libre */
+if(mapa[f][c] !== 1 && mapa[f][c] !== "E" && mapa[f][c] !== "S"){
+
 enemigos.push({
-x:canvas.width-CONFIG.tamCelda*2,
-y:canvas.height-CONFIG.tamCelda*2,
-dirX:1,
+
+x: c * CONFIG.tamCelda,
+y: f * CONFIG.tamCelda,
+
+dirX:0,
 dirY:0
+
 })
+
+colocado = true
+
+}
+
+}
 
 }
 
