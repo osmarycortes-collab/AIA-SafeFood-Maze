@@ -925,6 +925,8 @@ mostrarNivel()
 
 function iniciarJuego(){
 
+document.getElementById("juego").style.display="block"
+
 panel.classList.add("oculto")
 
 juegoIniciado = true
