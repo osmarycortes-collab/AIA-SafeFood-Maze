@@ -302,11 +302,17 @@ z-index:1;
 
 position:absolute;
 
-bottom:12%;
+bottom:12vh;
+
+left:0;
 
 width:100%;
 
-text-align:center;
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
 
 z-index:2;
 
