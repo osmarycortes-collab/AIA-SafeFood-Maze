@@ -717,7 +717,17 @@ CONFIG.tamCelda
 
 /* LOOP */
 
-function loop(){
+let ultimoFrame = 0
+const FPS = 30
+
+function loop(timestamp){
+
+if(timestamp - ultimoFrame < 1000/FPS){
+requestAnimationFrame(loop)
+return
+}
+
+ultimoFrame = timestamp
 
 ctx.clearRect(0,0,canvas.width,canvas.height)
 
@@ -729,7 +739,6 @@ dibujarEnemigos()
 if(juegoIniciado && !juegoPausado){
 
 moverAutomatico()
-
 moverEnemigos()
 colision()
 
