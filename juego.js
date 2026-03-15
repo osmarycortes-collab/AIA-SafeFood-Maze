@@ -402,15 +402,16 @@ alert("Debes responder todas las preguntas antes de salir del laberinto")
 
 juegoPausado = false
 
-direccion.x = 0
-direccion.y = 0
-
 /* retroceder una celda */
 jugador.x = (c - direccion.x) * CONFIG.tamCelda
 jugador.y = (f - direccion.y) * CONFIG.tamCelda
 
+direccion.x = 0
+direccion.y = 0
+
 return
 }
+  
 juegoPausado = true
 musicaNivel.pause()
 
