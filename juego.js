@@ -23,6 +23,8 @@ let juegoIniciado = false
 let juegoPausado = false
 let preguntaAbierta = false
 
+let mensajeSalidaMostrado = false
+
 let jugador = {x:0,y:0}
 
 /* DIRECCION ACTUAL */
