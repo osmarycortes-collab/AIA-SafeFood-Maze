@@ -9,8 +9,30 @@ e.preventDefault()
 
 },{ passive:false })
 
+function ajustarCanvas(){
+
+let ratio = CONFIG.anchoCanvas / CONFIG.altoCanvas
+
+let w = window.innerWidth
+let h = window.innerHeight
+
+if(w/h > ratio){
+w = h * ratio
+}else{
+h = w / ratio
+}
+
+canvas.style.width = w + "px"
+canvas.style.height = h + "px"
+
 canvas.width = CONFIG.anchoCanvas
 canvas.height = CONFIG.altoCanvas
+
+}
+
+window.addEventListener("resize",ajustarCanvas)
+
+ajustarCanvas()
 
 let nivelActual = 1
 let mapa = MAPAS[nivelActual-1]
