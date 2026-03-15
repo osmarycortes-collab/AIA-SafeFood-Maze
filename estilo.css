@@ -442,21 +442,32 @@ font-size:15px;
 /* MENSAJE ROTAR TELEFONO */
 
 #rotarTelefono{
+
 position:fixed;
 top:0;
 left:0;
-width:100%;
-height:100%;
+
+width:100vw;
+height:100vh;
+
 background:black;
 color:#7fffd4;
-font-size:28px;
-font-weight:bold;
+
 display:none;
-justify-content:center;
 align-items:center;
+justify-content:center;
+
 text-align:center;
+
+font-size:6vw;
+font-weight:bold;
+
+padding:20px;
+
+box-sizing:border-box;
+
 z-index:9999;
-padding:40px;
+
 }
 
 /* SI ESTA VERTICAL */
