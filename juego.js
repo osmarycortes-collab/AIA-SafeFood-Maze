@@ -850,6 +850,8 @@ panel.classList.remove("oculto")
 
 panelTitulo.innerText=""
 
+panelTexto.innerHTML = `
+
 <div class="certificado">
 
 <div style="display:flex;align-items:center;justify-content:center;gap:25px;margin-bottom:20px;">
