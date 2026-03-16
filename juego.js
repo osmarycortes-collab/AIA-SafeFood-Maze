@@ -886,6 +886,8 @@ No representa una certificación oficial ni está avalado por ninguna entidad.
 
 </div>
 
+<button onclick="descargarCertificado()">Descargar PDF</button>
+
 </div>
 `
 
