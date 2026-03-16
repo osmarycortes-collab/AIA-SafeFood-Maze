@@ -856,7 +856,7 @@ panelTitulo.innerText=""
 
 <img src="imagenes/logo/logo_aia_safefood_maze.png" width="130">
 
-<h1 style="margin:0;">CERTIFICADO DE LOGRO</h1>
+<h1 style="margin:0;letter-spacing:3px;">CERTIFICADO DE LOGRO</h1>
 
 </div>
 
