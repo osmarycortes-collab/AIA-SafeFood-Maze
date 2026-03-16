@@ -850,13 +850,15 @@ panel.classList.remove("oculto")
 
 panelTitulo.innerText=""
 
-panelTexto.innerHTML = `
-
 <div class="certificado">
 
-<img src="imagenes/logo/logo_aia_safefood_maze.png" width="180">
+<div style="display:flex;align-items:center;justify-content:center;gap:25px;margin-bottom:20px;">
 
-<h1>CERTIFICADO DE LOGRO</h1>
+<img src="imagenes/logo/logo_aia_safefood_maze.png" width="130">
+
+<h1 style="margin:0;">CERTIFICADO DE LOGRO</h1>
+
+</div>
 
 <p>Se otorga el presente certificado a</p>
 <div class="nombre">${nombre}</div>
