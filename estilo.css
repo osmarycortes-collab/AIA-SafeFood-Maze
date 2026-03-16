@@ -320,11 +320,11 @@ z-index:2;
 
 #menuBotones button{
 
-min-width:220px;
+width:240px;
 
-padding:14px 30px;
+padding:14px 20px;
 
-font-size:20px;
+font-size:18px;
 
 border:none;
 border-radius:14px;
