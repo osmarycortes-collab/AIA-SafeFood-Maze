@@ -120,12 +120,19 @@ text-shadow:0 0 12px rgba(0,255,200,0.7);
 /* TEXTO TARJETA */
 
 #panelTexto{
+
 text-align:justify;
-line-height:1.7;
+
+line-height:1.8;
+
 white-space:pre-line;
-margin-bottom:15px;
-font-size:16px;
-color:#222;
+
+margin-bottom:18px;
+
+font-size:17px;
+
+color:#e8e8e8;
+
 }
 
 
