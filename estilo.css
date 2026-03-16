@@ -189,13 +189,13 @@ box-shadow:0 0 12px rgba(0,255,200,0.6);
 
 #panelBotones button{
 
-margin:10px;
+margin:12px;
 
-padding:12px 22px;
+padding:14px 26px;
 
 cursor:pointer;
 
-border-radius:8px;
+border-radius:12px;
 
 border:none;
 
@@ -205,11 +205,12 @@ color:#7fffd4;
 
 font-weight:bold;
 
-letter-spacing:1px;
+letter-spacing:2px;
 
-box-shadow:0 0 10px rgba(0,255,200,0.5);
+box-shadow:
+0 0 14px rgba(0,255,200,0.7);
 
-transition:.2s;
+transition:.25s;
 
 }
 
@@ -217,12 +218,12 @@ transition:.2s;
 
 background:#000;
 
-box-shadow:0 0 18px rgba(0,255,200,0.8);
+box-shadow:
+0 0 25px rgba(0,255,200,0.9);
 
 transform:scale(1.05);
 
 }
-
 
 /* =========================
    CERTIFICADO
