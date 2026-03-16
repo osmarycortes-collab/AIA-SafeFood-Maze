@@ -1065,4 +1065,25 @@ iniciarTarjetas()
 
 })
 
+function descargarCertificado(){
+
+const elemento = document.querySelector(".certificado");
+
+const opciones = {
+
+margin:10,
+filename:'certificado-safefood-maze.pdf',
+
+image:{type:'jpeg',quality:0.98},
+
+html2canvas:{scale:2},
+
+jsPDF:{unit:'mm',format:'a4',orientation:'landscape'}
+
+};
+
+html2pdf().set(opciones).from(elemento).save();
+
+}
+
 
