@@ -149,21 +149,39 @@ height:auto;
 /* OPCIONES DE PREGUNTA */
 
 .opcion{
+
 display:block;
-margin:8px auto;
-padding:12px;
-width:92%;
+
+margin:10px auto;
+
+padding:14px;
+
+width:95%;
+
 cursor:pointer;
-background:#f5f5f5;
-border:1px solid #ccc;
-border-radius:8px;
-font-size:14px;
-transition:.2s;
+
+background:#111;
+
+border:1px solid rgba(0,255,200,0.4);
+
+border-radius:10px;
+
+font-size:15px;
+
+color:#7fffd4;
+
+transition:.25s;
+
 }
 
 .opcion:hover{
-background:#e8f4ff;
-transform:scale(1.02);
+
+background:#0a0a0a;
+
+transform:scale(1.03);
+
+box-shadow:0 0 12px rgba(0,255,200,0.6);
+
 }
 
 
