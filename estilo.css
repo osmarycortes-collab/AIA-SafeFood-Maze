@@ -272,8 +272,10 @@ color:#000;
 }
 
 .certificado p{
-margin:2px 0;
-line-height:1.2;
+margin:4px 0;
+line-height:1.4;
+font-size:18px;
+color:#222;
 }
 
 .certificado-disclaimer{
