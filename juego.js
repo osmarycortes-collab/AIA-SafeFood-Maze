@@ -893,7 +893,7 @@ No representa una certificación oficial ni está avalado por ninguna entidad.
 <button onclick="descargarCertificado()">Descargar PDF</button>
 
 </div>
-`
+`;
 
 panelBotones.innerHTML=""
 
