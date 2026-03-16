@@ -7,9 +7,9 @@
 const TARJETAS = {
 
     bienvenida: {
-        titulo: "Bienvenido",
+        titulo: "BIENVENIDO",
 
-        mensaje: `Mary Cortés te da la bienvenida a su juego educativo
+        mensaje: `Osmary Cortés Bracho te da la bienvenida a su juego educativo
 AIA – Aprende Inocuidad Alimentaria.
 
 Este proyecto nace con el propósito de demostrar cómo
